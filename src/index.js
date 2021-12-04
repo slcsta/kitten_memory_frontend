@@ -1,3 +1,6 @@
+// goot place to start set up store and set up my browser router
+// download a few libraries
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
