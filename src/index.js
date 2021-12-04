@@ -6,10 +6,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { Provider } from 'react-redux';
 
+// wrap our app in our Router - what does this do?
 ReactDOM.render(
   <React.StrictMode>
+    <Router>
     <App />
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
