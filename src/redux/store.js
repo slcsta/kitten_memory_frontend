@@ -3,5 +3,6 @@ import { applyMiddleware, createStore } from "redux";
 import thunk from "redux-thunk";
 import gamesReducer from "./reducers/gamesReducer";
 // just exporting the return value here and it's just a default so don't need a const but now import in index
+// and we will pass it as a prop to our provider
 export default createStore(gamesReducer, applyMiddleware(thunk)); 
 // after this go and define our reducer

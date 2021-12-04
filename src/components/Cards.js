@@ -1,9 +1,9 @@
 import React from 'react'  
 
-export default function Game() {
+export default function Games() {
     return (
         <div>
-            
+
         </div>
     )
 }

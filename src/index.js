@@ -1,8 +1,6 @@
 // goot place to start set up store and set up my browser router
 // download a few libraries
 // giving store a variable name here in index
-
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -10,15 +8,15 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import store from './store'
+import store from './redux/store'
 
 // wrap our app in our Router - what does this do?
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-    <Router>
-    <App />
-    </Router>
+      <Router>
+        <App />
+      </Router>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
