@@ -15,9 +15,11 @@ import store from './store'
 // wrap our app in our Router - what does this do?
 ReactDOM.render(
   <React.StrictMode>
+    <Provider store={store}>
     <Router>
     <App />
     </Router>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
