@@ -8,7 +8,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import store from './redux/store'
+import store from './redux/store';
 
 // wrap our app in our Router - what does this do?
 ReactDOM.render(
