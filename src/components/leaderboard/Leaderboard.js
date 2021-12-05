@@ -1,7 +1,14 @@
 // Statefull component 
-// will display scores for players
+// will display times (scores) for players
 
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import LeaderboardListContainer from './leaderboard/LeaderboardListContainer';
+import LeaderboardContainer from './leaderboard/LeaderboardListContainer';
 
+export default function Leaderboard() {
+    return (
+        <Switch>
+            <Route path="/leaderboard" component={routerProps => <LeaderboardContainer routerProps={routerProps} /> } />
+        </Switch>
+    )
+}
