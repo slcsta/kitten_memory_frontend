@@ -3,7 +3,7 @@
 
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import LeaderboardContainer from './leaderboard/LeaderboardListContainer';
+import LeaderboardContainer from './LeaderboardContainer';
 
 export default function Leaderboard() {
     return (
