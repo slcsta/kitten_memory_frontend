@@ -11,7 +11,11 @@
 // check card images - if 1st card same as 2nd card image, leave cards flipped
 // if images are different, flip both cards back over 
 // repeat until no more cards left to be flipped
- 
+
+// use one card and dynamically populate our cards
+// how do i pass props into a functional component?
+// with an argument 
+
 import React from 'react'  
 
 export default function Card() {
