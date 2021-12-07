@@ -1,4 +1,4 @@
-let cardObj = {
+let cardsObj = {
     "cardImages": [
         {
             "id": 1,
@@ -27,4 +27,4 @@ let cardObj = {
     ]
 }
 
-export default cardObj;
+export default cardsObj;
