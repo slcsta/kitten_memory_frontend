@@ -2,6 +2,7 @@
 import './App.css';
 import Leaderboard from './components/leaderboard/Leaderboard';
 import { NavLink } from 'react-router-dom';
+import CardImageContainer from './components/CardImageContainer';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <br />
       hello world!
       <Leaderboard />
+      <CardImageContainer />
     </div>
   );
 }
