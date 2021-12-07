@@ -18,16 +18,25 @@
 
 import React from 'react'  
 
-export default function Card() {
+// right now this is a functional component
+// so we pass props in as an argument
+export default function Card(props) {
 
-    // shuffle cards
-    const shuffleCards = () => {
-        const shuffledCards = [...cardImages, ...cardImages].sort(() => Math.random() - 0.5)
-        .map((card) => ({ ...card, id: Math.random() }))
-    }
+    // shuffle cards function - not sure this is shuffle function i want to use
+    // const shuffleCards = () => {
+    //     const shuffledCards = [...cardImages, ...cardImages].sort(() => Math.random() - 0.5)
+    //     .map((card) => ({ ...card, id: Math.random() }))
+    // }
     return (
-        <div>
-
+        <div clasName="card" id={`cardImages-${props.id}`}>
+            <img src={props.image}/>
         </div>
     )
 }
+
+// let cardObj = {
+//     "cardImages": [
+//         {
+//             "id": 1,
+//             "image": "https://cattime.com/assets/uploads/2012/05/socializing-kitten-e1565291146113.jpg",
+//         },

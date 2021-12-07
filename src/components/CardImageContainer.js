@@ -1,5 +1,5 @@
-// container that does data fetching and then renders
-// corresponding sub-component
+// container that does data fetching and then renders images
+// making this image container dynamic 
 import React from 'react';
 
 export default function CardImageContainer() {
