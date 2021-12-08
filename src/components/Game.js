@@ -5,7 +5,7 @@
 
 import React from 'react'  
 
-export default function GameBoard() {
+export default function Game() {
     return (
         <div>
 

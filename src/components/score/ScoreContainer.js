@@ -4,10 +4,10 @@
 
 import React from 'react' 
 
-export default function LeaderboardContainer() {
+export default function ScoreContainer() {
     return (
         <div>
-            All Players and Scores
+            All Scores
         </div>
     )
 }

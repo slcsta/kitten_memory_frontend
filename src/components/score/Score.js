@@ -4,12 +4,12 @@
 
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import LeaderboardContainer from './LeaderboardContainer';
+import ScoreContainer from './ScoreContainer';
 
-export default function Leaderboard() {
+export default function Score() {
     return (
         <Switch>
-            <Route path="/leaderboard" component={routerProps => <LeaderboardContainer routerProps={routerProps} /> } />
+            <Route path="/score" component={routerProps => <ScoreContainer routerProps={routerProps} /> } />
         </Switch>
     )
 }
