@@ -11,9 +11,7 @@ import { setScore } from './../../redux/actions/scoreActions'
 class ScoreContainer extends React.Component {
     
     componentDidMount(){
-        fetch("http://localhost:3000/scores")
-        .then(r => r.json())
-        .then(scoreArray => this.props.dispatchSetScore(scoreArray))
+        this.props.dispatchSetScore()
     }
     
     
@@ -37,7 +35,7 @@ function mapStateToProps(stateFromStore){
 
 function mapDispatchToProps(dispatch){
     return {
-        dispatchSetScore: (score) => dispatch(setScore(score))
+        dispatchSetScore: () => dispatch(setScore())
 
     }
 }

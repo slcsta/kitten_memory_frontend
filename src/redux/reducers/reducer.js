@@ -12,6 +12,13 @@ export default function reducer(state = {
             score: action.payload
         };
 
+        case "ADD_PERSON":
+
+        return {
+            ...state,
+            
+        }
+
      default:
          return state;
  }
