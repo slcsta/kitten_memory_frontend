@@ -1,4 +1,5 @@
 // what do i need from the redux library to create my store?
+// thunk allows my action creators to return a function 
 import { applyMiddleware, createStore } from "redux";
 import thunk from "redux-thunk";
 import reducer from "./reducers/reducer";
