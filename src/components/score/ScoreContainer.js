@@ -20,7 +20,10 @@ class ScoreContainer extends React.Component {
     render(){
         return (
             <div>
-                All Scores
+                <h2>All Scores</h2>
+                <div>
+                    {this.props.scores.map(score => <p>{score.username}</p>)}
+                </div>
             </div>
         )
     }
