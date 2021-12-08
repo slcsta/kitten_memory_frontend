@@ -4,14 +4,16 @@
 // how can i set up fetch data in score container and 
 // render on the page and put it in redux store and then render it
 
-import React from 'react' 
+import React from 'react'
+import { connect } from 'react-redux' 
+import { setScore } from './../../redux/scoreActions'
 
-export default class ScoreContainer extends React.Component {
+class ScoreContainer extends React.Component {
     
     componentDidMount(){
-        fetch("http://localhost:3000/score")
+        fetch("http://localhost:3000/scores")
         .then(r => r.json())
-        .then(data => console.log(data))
+        .then(scoreArray => console.log(scoreArray))
     }
     
     
@@ -23,3 +25,11 @@ export default class ScoreContainer extends React.Component {
         )
     }
 }
+
+function mapDispatchToProps(dispatch){
+    return {
+
+    }
+}
+
+export default connect(null, mapDispatchToProps)(ScoreContainer)

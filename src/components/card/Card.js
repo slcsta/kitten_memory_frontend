@@ -32,7 +32,7 @@ export default function Card(props) {
     //     .map((card) => ({ ...card, id: Math.random() }))
     // }
     return (
-        <div clasName="card" id={`cardImages-${props.id}`}>
+        <div className="card" id={`cardImages-${props.id}`}>
             <img src={props.image}/>
         </div>
     )
