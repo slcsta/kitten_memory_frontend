@@ -2,7 +2,7 @@
 import './App.css';
 import Leaderboard from './components/leaderboard/Leaderboard';
 import { NavLink } from 'react-router-dom';
-import CardImageContainer from './components/CardImageContainer';
+import CardImageContainer from './components/card/CardImageContainer';
 
 function App() {
   return (
@@ -10,9 +10,9 @@ function App() {
     // better to use margins than breaks but using breaks for now
     <div>
       <NavLink to="/">Home</NavLink><br />
-      <NavLink to="/leaderboard">Leaderboard</NavLink>
+      <NavLink to="/leaderboard">Leaderboard</NavLink><br />
+      <NavLink to="/instructions">Instructions</NavLink>
       <br />
-      hello world!
       <Leaderboard />
       <CardImageContainer />
     </div>

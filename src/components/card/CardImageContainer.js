@@ -1,7 +1,7 @@
 // container that does data fetching and then renders images
 // making this image container dynamic 
 import React from 'react';
-import cardsObj from '../database'
+import cardsObj from '../../database'
 import Card from './Card';
 
 export default function CardImageContainer() {
