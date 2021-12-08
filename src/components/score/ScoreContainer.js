@@ -6,14 +6,14 @@
 
 import React from 'react'
 import { connect } from 'react-redux' 
-import { setScore } from './../../redux/scoreActions'
+import { setScore } from './../../redux/actions/scoreActions'
 
 class ScoreContainer extends React.Component {
     
     componentDidMount(){
         fetch("http://localhost:3000/scores")
         .then(r => r.json())
-        .then(scoreArray => console.log(scoreArray))
+        .then(scoreArray => this.props.dispatchSetScore(scoreArray))
     }
     
     
@@ -26,10 +26,17 @@ class ScoreContainer extends React.Component {
     }
 }
 
+function mapStateToProps(stateFromStore){
+    return {
+        score: stateFromStore.score
+    }
+}
+
 function mapDispatchToProps(dispatch){
     return {
+        dispatchSetScore: (score) => dispatch(setScore(score))
 
     }
 }
 
-export default connect(null, mapDispatchToProps)(ScoreContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(ScoreContainer)
