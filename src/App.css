@@ -1,4 +1,20 @@
 
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 1px;
+  justify-items: center;
+  align-items: stretch;
+  padding: 10px 150px 10px 150px;
+}
+
+.grid-header-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+}
+
 
 .card {
   width: 100%;
