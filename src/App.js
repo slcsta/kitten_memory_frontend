@@ -6,9 +6,7 @@ import CardImageContainer from './components/card/CardImageContainer';
 
 function App() {
   return (
-    // <div className="App"> removed this but may want to add back later
-    // better to use margins than breaks but using breaks for now
-    <div>
+    <div className="App"> 
       <NavLink to="/">Home</NavLink><br />
       <NavLink to="/score">Leaderboard</NavLink><br />
       <NavLink to="/instructions">Instructions</NavLink>
