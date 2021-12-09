@@ -2,15 +2,15 @@ let cardsObj = {
     "cardImages": [
         {
             "id": 1,
-            "image": "https://cattime.com/assets/uploads/2012/05/socializing-kitten-e1565291146113.jpg",
+            "image": "https://hips.hearstapps.com/clv.h-cdn.co/assets/15/33/1024x678/gettyimages-187144072.jpg?resize=980:*",
         },
         {
             "id": 2,
-            "image": "https://www.seattleareafelinerescue.org/wp-content/uploads/2016/10/Fotolia_86039271_XS.jpg",
+            "image": "https://hips.hearstapps.com/clv.h-cdn.co/assets/15/33/1024x678/gettyimages-170060331.jpg?resize=980:*",
         },
         {
             "id": 3,
-            "image": "https://hips.hearstapps.com/clv.h-cdn.co/assets/15/33/2048x1024/landscape-1439400031-gettyimages-187144066.jpg?resize=980:*",
+            "image": "https://hips.hearstapps.com/clv.h-cdn.co/assets/15/33/1024x677/gettyimages-165878189.jpg?resize=980:*",
         },
         {
             "id": 4,

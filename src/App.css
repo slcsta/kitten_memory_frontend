@@ -6,26 +6,47 @@ body {
   margin: 3;
 }
 
-.card {
-  border: grey solid 1px;
+/* /* #kitten-header {
+  display: flex;
+  justify-content: center;
+  background: #515DA2;
+  opacity: .8;
+  height: 7rem;
   padding: 1rem;
+} */
+
+/* #kitten-header img {
+  height: 6rem;
+  width: auto;
+} */
+
+/* #kitten-collection {
+  margin: 2rem;
+} */
+
+.card {
+  border: grey solid 2px;
+  /* padding: .3rem; */
   width: 15rem;
-  height: 25rem;
+  height: 10rem;
   display: inline-grid;
-  margin: 1rem 2rem;
-  box-shadow: 3px 4px #e04b52
+  margin: 1rem 1rem;
+  box-shadow: 3px 4px grey
 }
 
-
-
+.kitten-avatar {
+  justify-self: center;
+  height: 10rem;
+  width: auto;
+}
 
 .container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  justify-items: center;
-  align-items: stretch;
-  gap: 1rem;
+  padding: 1rem;
+  width: stretch;
+  height: auto;
+  display: none;
+  background: #515DA2;
+  opacity: .8;
 }
 
 /* .grid-header-container {
