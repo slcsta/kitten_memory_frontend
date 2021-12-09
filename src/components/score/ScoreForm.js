@@ -21,14 +21,23 @@ export default class ScoreForm extends Component {
         return 
     }
 
+    handleSubmit = (e) => {
+        e.preventDefualt()
+        // dispatch my action to addScore
 
+        // then clear out my score
+        this.setState({username: ""})
+    }
 
     render() {
         return (
 
             <form onSubmit={this.handleSubmit}>
                 <label htmlFor="username">Username:</label>
-                <input id="score-username-input" onChange={this.handleChange} type="text" />
+                <input id="score-username-input" 
+                onChange={this.handleChange} 
+                value={this.state.username} 
+                type="text" />
                 <input type="submit"/>
             </form>
         )
