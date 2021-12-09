@@ -2,7 +2,7 @@ let cardsObj = {
     "cardImages": [
         {
             "id": 1,
-            "image": "https://hips.hearstapps.com/clv.h-cdn.co/assets/15/33/1024x678/gettyimages-187144072.jpg?resize=980:*",
+            "image": "https://hips.hearstapps.com/clv.h-cdn.co/assets/15/33/1024x677/gettyimages-124237377.jpg?resize=980:*",
         },
         {
             "id": 2,
@@ -10,7 +10,7 @@ let cardsObj = {
         },
         {
             "id": 3,
-            "image": "https://hips.hearstapps.com/clv.h-cdn.co/assets/15/33/1024x677/gettyimages-165878189.jpg?resize=980:*",
+            "image": "https://hips.hearstapps.com/clv.h-cdn.co/assets/15/33/1024x677/gettyimages-124250636.jpg?resize=980:*",
         },
         {
             "id": 4,
