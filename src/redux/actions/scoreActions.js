@@ -15,5 +15,18 @@ export const setScore = () => {
     }
 
 }
+
+// add score via a form and allow score to have a name
+// action creators always functions
+// async logic to add a score
+// here I am sending a post request and will utilize thunk and return a function
+
+
+export const addScore = () => {
+    return (dispatch) => {
+        fetch("http://localhost:3000/score")
+    }
+
+}
     
     

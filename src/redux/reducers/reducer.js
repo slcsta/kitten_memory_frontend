@@ -12,11 +12,12 @@ export default function reducer(state = {
             score: action.payload
         };
 
-        case "ADD_PERSON":
+        case "ADD_SCORE":
 
         return {
             ...state,
-            
+            score: [...state.score, action.payload]
+
         }
 
      default:
