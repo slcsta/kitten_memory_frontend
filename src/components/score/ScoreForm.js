@@ -5,13 +5,30 @@ import React, { Component } from 'react'
 
 export default class ScoreForm extends Component {
     // need local state here
-    state ={}
+    state ={
+        username: ""
+    }
+
+    // need an event handler here for the submit
+    // needs to be an arrow function so that we have
+    // the context from where we are defining it rather than where we are calling it
+    // a regular function would only give us the context of where we are calling it
+    // arrow function binds it to the "this" giving us the context of where it is
+    // defined below
+
+    handleChange = (e) => {
+        this.setState({username: e.target.value})
+        return 
+    }
+
+
+
     render() {
         return (
 
-            <form>
+            <form onSubmit={this.handleSubmit}>
                 <label htmlFor="username">Username:</label>
-                <input id="username-input" type="text" />
+                <input id="score-username-input" onChange={this.handleChange} type="text" />
                 <input type="submit"/>
             </form>
         )
