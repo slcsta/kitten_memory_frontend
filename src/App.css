@@ -1,30 +1,38 @@
+.App { 
+  text-align: center;
+}
 
-.grid-container {
+body {
+  margin: 3;
+}
+
+.card {
+  border: grey solid 1px;
+  padding: 1rem;
+  width: 15rem;
+  height: 25rem;
+  display: inline-grid;
+  margin: 1rem 2rem;
+  box-shadow: 3px 4px #e04b52
+}
+
+
+
+
+.container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, 1fr);
-  grid-gap: 1px;
   justify-items: center;
   align-items: stretch;
-  padding: 10px 150px 10px 150px;
+  gap: 1rem;
 }
 
-.grid-header-container {
+/* .grid-header-container {
   display: grid;
   grid-template-columns: auto auto auto;
   padding: 10px;
-}
-
-
-.card {
-  width: 100%;
-  height: 10em;
-  background-color: black;
-  color: white;
-  font-size: 15px;
-}
-
-
+} */
 
 
 /* .App {
