@@ -40,7 +40,6 @@ export const addScore = (score) => {
         .then(r => r.json())
         .then(score => dispatch({type: "ADD_SCORE", payload: score}))
     }
-
 }
     
     
