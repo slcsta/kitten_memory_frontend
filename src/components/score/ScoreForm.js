@@ -1,7 +1,9 @@
 // we want this to be a class component because we want a controlled state for our form for our input fields
 // how do i set up this one input field to be controlled with my state?
 
-import React, { Component } from 'react' 
+import React, { Component } from 'react'; 
+import { addScore } from '../../redux/actions/scoreActions';
+import { connect } from 'react-redux';
 
 export default class ScoreForm extends Component {
     // need local state here
@@ -16,6 +18,7 @@ export default class ScoreForm extends Component {
     // arrow function binds it to the "this" giving us the context of where it is
     // defined below
 
+
     handleChange = (e) => {
         this.setState({username: e.target.value})
         return 
@@ -28,6 +31,8 @@ export default class ScoreForm extends Component {
         // then clear out my score
         this.setState({username: ""})
     }
+
+    // what do i need to do in my score form to dispatch addScore?
 
     render() {
         return (
@@ -43,3 +48,5 @@ export default class ScoreForm extends Component {
         )
     }
 }
+
+export default connect()(ScoreForm)
