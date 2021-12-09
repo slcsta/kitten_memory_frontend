@@ -49,4 +49,14 @@ export default class ScoreForm extends Component {
     }
 }
 
-export default connect()(ScoreForm)
+// always want to return an object here that will merge with our props
+function mapDispatchToProps(dispatch) {
+    return {
+      dispatchAddPerson: () => dispatch(addScore()) 
+    }
+}
+// getting access to dispatch here
+// so with connect, 1st argument gives me access to state
+// 2nd arg gives me access to dispatch
+// and both args will return an object that will be merged with my props
+export default connect(null, mapDispatchToProps)(ScoreForm)
