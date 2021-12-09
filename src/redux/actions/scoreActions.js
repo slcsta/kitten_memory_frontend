@@ -21,9 +21,13 @@ export const setScore = () => {
 // comma and then object as an argument b/c i'm sending data to my backend
 // need a method as a key to explicityly tell that this object is a post request
 // headers telling my backend what i expect to get back
+// what am i stringifying here? for the body
+// do i have access to score? need to pass in the argument of score ad my score object
+// then lets parse out the response
+// second then response is where i am dispatching to my store - lots of questions here
 
 // add score
-export const addScore = () => {
+export const addScore = (score) => {
     return (dispatch) => {
         fetch("http://localhost:3000/score", { 
             method: "POST",
@@ -31,9 +35,10 @@ export const addScore = () => {
                 "Content-Type": "application/json",
                 Accept: "application/json"
             },
-            body: JSON.stringify()
-
+            body: JSON.stringify(score)
         })
+        .then(r => r.json())
+        .then(score => dispatch({type: "ADD_SCORE", payload: score}))
     }
 
 }
