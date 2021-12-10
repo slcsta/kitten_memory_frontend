@@ -11,6 +11,7 @@ export default function CardImageContainer() {
     // for each card, making/invoking a Card component
     // seems random shuffle for assigning images to cards will need to go here or maybe cards created and then they get shuffled?
     // how do i actually give this card my image info?
+    
     const cards = cardsObj.cardImages.map(card => < Card id={card.id} image={card.image} /> )
         return ( 
             <div>

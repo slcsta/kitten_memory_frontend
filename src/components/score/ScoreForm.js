@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 import { addScore } from '../../redux/actions/scoreActions';
 import { connect } from 'react-redux';
 
-export default class ScoreForm extends Component {
+class ScoreForm extends Component {
     // need local state here
     state ={
         username: ""
@@ -19,15 +19,15 @@ export default class ScoreForm extends Component {
     // defined below
 
 
-    handleChange = (e) => {
+    handleChange = e => {
         this.setState({username: e.target.value})
         return 
     }
 
-    handleSubmit = (e) => {
+    handleSubmit = e => {
         e.preventDefualt()
         // dispatch my action to addScore
-
+        this.props.dispatchAddScore(this.state)
         // then clear out my score
         this.setState({username: ""})
     }
@@ -36,10 +36,10 @@ export default class ScoreForm extends Component {
 
     render() {
         return (
-
             <form onSubmit={this.handleSubmit}>
                 <label htmlFor="username">Username:</label>
-                <input id="score-username-input" 
+                <input 
+                id="score-username-input" 
                 onChange={this.handleChange} 
                 value={this.state.username} 
                 type="text" />
@@ -52,7 +52,7 @@ export default class ScoreForm extends Component {
 // always want to return an object here that will merge with our props
 function mapDispatchToProps(dispatch) {
     return {
-      dispatchAddPerson: () => dispatch(addScore()) 
+      dispatchAddScore: (score) => dispatch(addScore(score)) 
     }
 }
 // getting access to dispatch here

@@ -17,6 +17,8 @@ export const setScore = () => {
 // add score via a form and allow score to have a name
 // action creators always functions
 // async logic to add a score
+// my async logic here will be the post request as a fetch sent to the backend
+// so for that async logic we will use redux thunk
 // here I am sending a post request and will utilize thunk and return a function
 // comma and then object as an argument b/c i'm sending data to my backend
 // need a method as a key to explicityly tell that this object is a post request
@@ -29,11 +31,11 @@ export const setScore = () => {
 // add score
 export const addScore = (score) => {
     return (dispatch) => {
-        fetch("http://localhost:3000/score", { 
+        fetch("http://localhost:3000/scores", { 
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                Accept: "application/json"
+                "Accept": "application/json"
             },
             body: JSON.stringify(score)
         })

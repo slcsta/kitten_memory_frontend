@@ -7,18 +7,19 @@
 import React from 'react'
 import { connect } from 'react-redux' 
 import { setScore } from './../../redux/actions/scoreActions'
+import ScoreForm from './ScoreForm';
 
 class ScoreContainer extends React.Component {
     
     componentDidMount(){
         this.props.dispatchSetScore()
     }
-    
-    
+     
     render(){
         return (
             <div>
                 <h2>All Scores</h2>
+                <ScoreForm />
                 <div>
                     {this.props.score.map(s => <p>{s.username}</p>)}
                 </div>

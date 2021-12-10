@@ -9,7 +9,7 @@ import ScoreContainer from './ScoreContainer';
 export default function Score() {
     return (
         <Switch>
-            <Route path="/score" component={routerProps => <ScoreContainer routerProps={routerProps} /> } />
+            <Route path="/scores" component={routerProps => <ScoreContainer routerProps={routerProps} /> } />
         </Switch>
     )
 }

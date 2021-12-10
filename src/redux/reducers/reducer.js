@@ -1,5 +1,9 @@
 // start off by creating a function for our reducer
 // can make this an anonymous function but let's leave name of reducer to keep it clear
+// create a new case for ADD_SCORE
+// first return state and spread state
+// this action will come from our action creator and that is dispatched inside the action creator
+
 export default function reducer(state = {
     score: [], 
     loading: false
