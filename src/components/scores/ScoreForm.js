@@ -27,7 +27,7 @@ class ScoreForm extends Component {
         e.preventDefualt()
         // dispatch my action to addScore
         this.props.dispatchAddScore(this.state)
-        // then clear out my score
+        // then clear out my state
         this.setState({username: ""})
     }
 
@@ -37,10 +37,11 @@ class ScoreForm extends Component {
         return (
             <form onSubmit={this.handleSubmit}>
                 <label htmlFor="score-username-input">Username:</label>
-                <input id="score-username-input" 
-                onChange={this.handleChange} 
-                value={this.state.username} 
-                type="text" />
+                <input 
+                    id="score-username-input" 
+                    onChange={this.handleChange} 
+                    value={this.state.username} 
+                    type="text" />
                 <input type="submit"/>
             </form>
         )
