@@ -2,16 +2,15 @@
 // making this image container dynamic 
 
 import React from 'react';
-import cardsObj from '../../database';
+import cardImages from '../../database';
 import Card from './Card';
 
 export default function CardImageContainer() {
-    
     // const [cards, setCards] = useState([])
-
-    
-    // state = {
-    //      cats: [],
+    state = {
+        setCards: [],
+        moves: "0"
+    }
 
     // for each card, making/invoking a Card component
     // seems random shuffle for assigning images to cards will need to go here or maybe cards created and then they get shuffled?
@@ -19,20 +18,20 @@ export default function CardImageContainer() {
 
     // {this.props.scores.map(score => <p key={score.id}>{score.username}</p>)}
 
-    // const shuffleCards = () => {
-    //     const shuffledCards = [...cardsObj.cardImages, ...cardsObj.cardImages]
-    //         .sort(() => Math.random() - 0.5)
-    //         .map((card) => ({ ...card, id: Math.random() }))
+    const shuffleCards = () => {
+        const shuffledCards = [...cardImages, ...cardImages]
+            .sort(() => Math.random() - 0.5)
+            .map((card) => ({ ...card, id: Math.random() }))
 
-    //         setCards(shuffledCards)
+            setCards(shuffledCards)
     
-    //     }
+        }
     
-    const cards = cardsObj.cardImages.map(card => < Card key={card.id} image={card.image} /> )
-        return ( 
-            <div>
-                {cards}
-            </div>
-        )    
+    // const cards = cardsObj.cardImages.map(card => < Card key={card.id} image={card.image} /> )
+    //     return ( 
+    //         <div>
+    //             {cards}
+    //         </div>
+    //     )    
 }
 
