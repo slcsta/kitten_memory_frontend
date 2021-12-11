@@ -8,7 +8,8 @@ import React from 'react'
 export default function Game() {
     return (
         <div>
-
+            <h1>Kitten Memory Game</h1>
+            <button>New Game</button>
         </div>
     )
 }
