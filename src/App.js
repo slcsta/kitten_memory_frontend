@@ -11,6 +11,7 @@ function App() {
       <NavLink to="/scores">Scores</NavLink><br />
       <NavLink to="/instructions">Instructions</NavLink>
       <br />
+      <Score />
       <CardImageContainer />
     </div>
   );

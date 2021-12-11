@@ -2,7 +2,7 @@
 // how do i set up this one input field to be controlled with my state?
 
 import React, { Component } from 'react'; 
-import { addScore } from '../../redux/actions/scoreActions';
+import { addScore } from '../../redux/scoreActions';
 import { connect } from 'react-redux';
 
 class ScoreForm extends Component {

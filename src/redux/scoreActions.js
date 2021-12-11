@@ -5,12 +5,12 @@
 // gives me access to dispatch w/in my action creators
 
 // get scores
-export const setScore = () => { 
+export const setScores = () => { 
     return (dispatch) => {
         // now it's a callback so i can put any async funciton in here so this is where i want to put my fetch request
         fetch("http://localhost:3000/scores")
         .then(r => r.json())
-        .then(score => dispatch({type: "SET_SCORE", payload: score}))
+        .then(scores => dispatch({type: "SET_SCORES", payload: scores}))
     }
 }
 

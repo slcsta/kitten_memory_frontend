@@ -5,22 +5,22 @@
 // this action will come from our action creator and that is dispatched inside the action creator
 
 export default function reducer(state = {
-    score: [], 
+    scores: [], 
     loading: false
 }, action) {
  switch(action.type) {
-    case "SET_SCORE":
+    case "SET_SCORES":
 
         return {
             ...state,
-            score: action.payload
+            scores: action.payload
         };
 
         case "ADD_SCORE":
 
         return {
             ...state,
-            score: [...state.score, action.payload]
+            score: [...state.scores, action.payload]
 
         }
 

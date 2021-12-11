@@ -6,7 +6,7 @@
 
 import React from 'react'
 import { connect } from 'react-redux' 
-import { setScore } from './../../redux/actions/scoreActions'
+import { setScores } from './../../redux/scoreActions'
 import ScoreForm from './ScoreForm';
 
 class ScoreContainer extends React.Component {
@@ -21,7 +21,7 @@ class ScoreContainer extends React.Component {
                 <h2>All Scores</h2>
                 <ScoreForm />
                 <div>
-                    {this.props.score.map(s => <p>{s.username}</p>)}
+                    {this.props.scores.map(score => <p key={score.id}>{score.username}</p>)}
                 </div>
             </div>
         )
@@ -30,13 +30,13 @@ class ScoreContainer extends React.Component {
 
 function mapStateToProps(stateFromStore){
     return {
-        score: stateFromStore.score
+        scores: stateFromStore.scores
     }
 }
 
 function mapDispatchToProps(dispatch){
     return {
-        dispatchSetScore: () => dispatch(setScore())
+        dispatchSetScore: () => dispatch(setScores())
 
     }
 }
