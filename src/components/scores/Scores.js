@@ -4,12 +4,12 @@
 
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import ScoreContainer from './ScoreContainer';
+import ScoresContainer from './ScoresContainer';
 
-export default function Score() {
+export default function Scores() {
     return (
         <Switch>
-            <Route path="/scores" component={routerProps => <ScoreContainer routerProps={routerProps} /> } />
+            <Route path="/scores" component={routerProps => <ScoresContainer routerProps={routerProps} /> } />
         </Switch>
     )
 }

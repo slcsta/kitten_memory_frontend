@@ -18,7 +18,6 @@ class ScoreForm extends Component {
     // arrow function binds it to the "this" giving us the context of where it is
     // defined below
 
-
     handleChange = e => {
         this.setState({username: e.target.value})
         return 
@@ -37,9 +36,8 @@ class ScoreForm extends Component {
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
-                <label htmlFor="username">Username:</label>
-                <input 
-                id="score-username-input" 
+                <label htmlFor="score-username-input">Username:</label>
+                <input id="score-username-input" 
                 onChange={this.handleChange} 
                 value={this.state.username} 
                 type="text" />

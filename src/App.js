@@ -1,6 +1,6 @@
 // components need to be set up within my app
 import './App.css';
-import Score from './components/score/Score';
+import Scores from './components/scores/Scores';
 import { NavLink } from 'react-router-dom';
 import CardImageContainer from './components/card/CardImageContainer';
 
@@ -11,7 +11,7 @@ function App() {
       <NavLink to="/scores">Scores</NavLink><br />
       <NavLink to="/instructions">Instructions</NavLink>
       <br />
-      <Score />
+      <Scores />
       <CardImageContainer />
     </div>
   );

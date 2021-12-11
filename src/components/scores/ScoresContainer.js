@@ -4,12 +4,12 @@
 // how can i set up fetch data in score container and 
 // render on the page and put it in redux store and then render it
 
-import React from 'react'
-import { connect } from 'react-redux' 
-import { setScores } from './../../redux/scoreActions'
+import React from 'react';
+import { connect } from 'react-redux'; 
+import { setScores } from '../../redux/scoreActions';
 import ScoreForm from './ScoreForm';
 
-class ScoreContainer extends React.Component {
+class ScoresContainer extends React.Component {
     
     componentDidMount(){
         this.props.dispatchSetScore()
@@ -41,4 +41,4 @@ function mapDispatchToProps(dispatch){
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(ScoreContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(ScoresContainer)
