@@ -8,7 +8,7 @@ import React from 'react';
 import { connect } from 'react-redux'; 
 import { setScores } from '../../redux/scoreActions';
 import ScoreForm from './ScoreForm';
-import { Switch, Route } from 'react-router-dom'
+//import { Switch, Route } from 'react-router-dom'
 
 class ScoresContainer extends React.Component {
     
@@ -20,11 +20,8 @@ class ScoresContainer extends React.Component {
         return (
             <div>
                 <h2>All Scores</h2>
-                {/* <ScoreForm /> */}
-                <Switch>
-                    <Route exact path="/scores/new"component={routerProps => <ScoreForm /> } />
-                </Switch> 
-                <div>
+                <ScoreForm />
+            <div>
                     {this.props.scores.map(score => <p key={score.id}>{score.username}</p>)}
                 </div>
             </div>

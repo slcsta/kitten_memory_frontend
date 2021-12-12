@@ -2,7 +2,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import ScoresContainer from './scores/ScoresContainer';
 import Home from './Home';
-import Instructions from './Instructions'
+import Instructions from './Instructions';
 
 export default function Pages() {
     return (
