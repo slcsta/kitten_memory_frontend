@@ -7,7 +7,8 @@ import cardImages from '../../database';
 //import Card from './Card';
 
 class CardsContainer extends React.Component () {
-    //cards = [] 
+    // add empty cards array for pushing cards after they are checked
+    cards = [] 
     // state ={
     //     Turns: 0,
     // }
