@@ -2,6 +2,7 @@
 import './App.css';
 import Scores from './components/scores/Scores';
 import { NavLink } from 'react-router-dom';
+
 //import CardsContainer from './components/card/CardsContainer';
 
 function App() {
