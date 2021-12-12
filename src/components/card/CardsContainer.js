@@ -47,7 +47,7 @@ class CardsContainer extends React.Component () {
 
     render() {    
         return ( 
-
+            <Wrapper>
             {this.state.cardImages.map(card => (
                 <Card
                     Clicked={this.state.Clicked}
@@ -56,6 +56,7 @@ class CardsContainer extends React.Component () {
                     key={card.id}
                     />
             ))}
+            </Wrapper>
         //     <div className="card" >
         //         {cardImages
         //         .sort(() => Math.random() - 0.5)
@@ -71,7 +72,7 @@ class CardsContainer extends React.Component () {
         //             )
         //         })}
         //     </div>
-        // )
-    }
+    )
+}
 }
 export default CardsContainer;
