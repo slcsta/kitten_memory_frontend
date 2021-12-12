@@ -12,7 +12,7 @@ class CardsContainer extends Component {
     cards = [] 
     
     state ={
-        turns: 0,
+        setTurns: 0,
         setCards: []
     }
 
@@ -22,12 +22,12 @@ class CardsContainer extends Component {
         .sort(() => Math.random() - 0.5)
         .map((card) => ({ ...card, id: Math.random() }))
 
-            //setCards(shuffledCards)
+        setCards(shuffledCards)
+        setTurns(0)
     
-    //    }
+    }
 
-    
-    const cards = cardsObj.cardImages.map(card => < Card key={card.id} image={card.image} /> )
+    // const cards = cardsObj.cardImages.map(card => < Card key={card.id} image={card.image} /> )
         
     render(){
         return ( 

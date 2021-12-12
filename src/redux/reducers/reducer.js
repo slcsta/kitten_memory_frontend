@@ -6,6 +6,7 @@
 
 export default function reducer(state = {
     scores: [], 
+    cards: [],
     loading: false
 }, action) {
  switch(action.type) {
@@ -16,13 +17,26 @@ export default function reducer(state = {
             scores: action.payload
         };
 
-        case "ADD_SCORE":
+    case "ADD_SCORE":
 
         return {
             ...state,
             score: [...state.scores, action.payload]
+        };
+    
+    case "SET_CARDS":
 
-        }
+        return {
+            ...state,
+            cards: [...state.cards, action.payload]
+        };
+
+    case "SET_TURNS":
+
+        return {
+            ...state,
+            turns: [...state.turns, action.payload]
+        };
 
      default:
          return state;
