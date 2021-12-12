@@ -14,6 +14,14 @@ class CardsContainer extends React.Component () {
     //const cards = cardsObj.cardImages.map(card => < Card key={card.id} image={card.image} /> )
 
     // add onClick to handle function of clicking cards
+    handleClick = e => {
+        let card = e.target;
+        if (card.getAttribute("check") === "found") {
+            return
+        } 
+    }
+
+
     render() {    
         return ( 
             <div className="card" >
