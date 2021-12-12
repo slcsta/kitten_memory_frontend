@@ -4,9 +4,9 @@
 import { render } from '@testing-library/react';
 import React from 'react';
 import cardImages from '../../database';
-import Card from './Card';
+//import Card from './Card';
 
-export default function CardsContainer() {
+class CardsContainer extends React.Component () {
     //cards = [] 
     // state ={
     //     Turns: 0,
@@ -39,3 +39,4 @@ export default function CardsContainer() {
         )
     }
 }
+export default CardsContainer;
