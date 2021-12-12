@@ -24,19 +24,19 @@ export default function reducer(state = {
             score: [...state.scores, action.payload]
         };
     
-    case "SET_CARDS":
+    // case "SET_CARDS":
 
-        return {
-            ...state,
-            cards: [...state.cards, action.payload]
-        };
+    //     return {
+    //         ...state,
+    //         cards: [...state.cards, action.payload]
+    //     };
 
-    case "SET_TURNS":
+    // case "SET_TURNS":
 
-        return {
-            ...state,
-            turns: [...state.turns, action.payload]
-        };
+    //     return {
+    //         ...state,
+    //         turns: [...state.turns, action.payload]
+    //     };
 
      default:
          return state;
