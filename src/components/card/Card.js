@@ -28,15 +28,9 @@ import React from 'react'
 export default function Card(props) {
         return (
         <div className={"card" + (props.Clicked ? "animate" : "")} onClick={() => props.handleClick(props.id)} >
-            <img alt={props.nameid={`cardImages-${props.id}`}>
-//             <img src={props.image} alt={props.description} className="kitten-avatar"/>
-//         </div>
-//     )
-// }
-
-// // let cardObj = {
-// //     "cardImages": [
-// //         {
-// //             "id": 1,
-// //             "image": "https://cattime.com/assets/uploads/2012/05/socializing-kitten-e1565291146113.jpg",
-// //         },
+            <div className="kitten-avatar">
+                <img alt={props.name} src={props.image} />
+           </div>
+            </div>
+        )
+}
