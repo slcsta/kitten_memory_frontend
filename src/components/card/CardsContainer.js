@@ -22,6 +22,17 @@ class CardsContainer extends React.Component () {
             return
         } 
 
+    handleMoves = e => {
+
+    }   
+    
+    shuffleCards = () => {
+        //shuffly array of images
+        const shuffledCards = this.shuffle(this.state.cards);
+        // seeting 'shuffledCards' as the new sate
+        this.setState({ shuffledCards });
+    }
+
         //if card match occurs then push to array
         
     }
