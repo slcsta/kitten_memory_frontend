@@ -20,14 +20,15 @@
 // how do i pass props into a functional component?
 // with an argument 
 
-// import React from 'react'  
+import React from 'react'  
 
 // // right now this is a functional component
 // // so we pass props in as an argument
-// export default function Card(props) {
-        
-//     return (
-//         <div className="card" id={`cardImages-${props.id}`}>
+// checking if clicked, then animate else not
+export default function Card(props) {
+        return (
+        <div className={"card" + (props.Clicked ? "animate" : "")} onClick={() => props.handleClick(props.id)} >
+            <img alt={props.nameid={`cardImages-${props.id}`}>
 //             <img src={props.image} alt={props.description} className="kitten-avatar"/>
 //         </div>
 //     )

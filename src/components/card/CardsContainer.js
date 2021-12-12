@@ -20,8 +20,13 @@ class CardsContainer extends React.Component () {
         if (card.getAttribute("check") === "found") {
             return
         } 
-    }
 
+        //if card match occurs then push to array
+        
+    }
+    //<div className="card" id={`cardImages-${props.id}`}>
+    //             <img src={props.image} alt={props.description} className="kitten-avatar"/>
+    //         </div>
 
     render() {    
         return ( 
