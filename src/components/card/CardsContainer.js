@@ -21,16 +21,17 @@ class CardsContainer extends React.Component () {
         if (card.getAttribute("check") === "found") {
             return
         } 
-
-    handleMoves = e => {
-
-    }   
     
     shuffleCards = () => {
         //shuffly array of images
         const shuffledCards = this.shuffle(this.state.cards);
         // seeting 'shuffledCards' as the new sate
         this.setState({ shuffledCards });
+    }
+
+    handleMoves = e => {
+        //setting state method to update component's state
+        this.setState({ currentMoves: this.state.currentMoves + 1 });
     }
 
         //if card match occurs then push to array
