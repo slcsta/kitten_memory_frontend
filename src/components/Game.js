@@ -3,13 +3,16 @@
 // We should shuffle cards and then render as a 3X4 card board
 // Use a CSS Grid to render gameboard 
 
-import React from 'react'  
+// import React from 'react'  
+// import CardImageContainer from './card/CardImageContainer'
 
-export default function Game() {
-    return (
-        <div>
-            <h1>Kitten Memory Game</h1>
-            <button>New Game</button>
-        </div>
-    )
-}
+// export default function Game() {
+//     return (
+//         <div>
+//             <h1>Kitten Memory Game</h1>
+//             <button onClick={shuffleCards}>New Game</button>
+//             < CardImageContainer />
+            
+//         </div>
+//     )
+// }

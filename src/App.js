@@ -2,7 +2,7 @@
 import './App.css';
 import Scores from './components/scores/Scores';
 import { NavLink } from 'react-router-dom';
-import CardImageContainer from './components/card/CardImageContainer';
+import CardsContainer from './components/card/CardsContainer';
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
       <NavLink to="/instructions">Instructions</NavLink>
       <br />
       <Scores />
-      <CardImageContainer />
+      <CardsContainer />
     </div>
   );
 }
