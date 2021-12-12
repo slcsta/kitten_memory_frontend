@@ -19,7 +19,7 @@ export default function CardsContainer() {
     //     CardsContainer(shuffledCards)
     // }
     //const cards = cardsObj.cardImages.map(card => < Card key={card.id} image={card.image} /> )
-    render()    
+    render() {    
         return ( 
             <div className="card" >
                 {cardImages
@@ -27,11 +27,15 @@ export default function CardsContainer() {
                 .map((element) => {
                     return (
                         <div
+                            className="image card-backside"
+                            name={element.name}
+                            style={{ background: `url(${element.pic})` }}
+                            check="false"
+                            onclick={this.handleClick}
+                        />
                     )
-                })
-                }
-                <h1>Kitten Memory Game</h1>
-                {cards}
+                })}
             </div>
         )
     }
+}
