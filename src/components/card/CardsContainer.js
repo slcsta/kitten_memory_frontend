@@ -7,14 +7,16 @@ import Card from './Card';
 
 class CardsContainer extends React.Component () {
     // add empty cards array for pushing cards after they are checked
-    cards = [] 
+    cardsArray = [] 
+    
     state = {
-        cards,
+        cardImages,
         turns: 0,
         clicked: false
     };
+    
     //const cards = cardsObj.cardImages.map(card => < Card key={card.id} image={card.image} /> )
-
+   
     // add onClick to handle function of clicking cards
     handleClick = e => {
         let card = e.target;
@@ -29,12 +31,14 @@ class CardsContainer extends React.Component () {
         this.setState({ shuffledCards });
     }
 
-    handleMoves = e => {
+    handleTurns = e => {
         //setting state method to update component's state
-        this.setState({ currentMoves: this.state.currentMoves + 1 });
+        this.setState({ turns: this.state.turns + 1 });
     }
 
-        //if card match occurs then push to array
+    // need randomizing function for shuffle cards
+
+    //if card match occurs then push to array
         
     }
     //<div className="card" id={`cardImages-${props.id}`}>
@@ -43,22 +47,31 @@ class CardsContainer extends React.Component () {
 
     render() {    
         return ( 
-            <div className="card" >
-                {cardImages
-                .sort(() => Math.random() - 0.5)
-                .map((element) => {
-                    return (
-                        <div
-                            className="image card-backside"
-                            name={element.name}
-                            style={{ background: `url(${element.pic})` }}
-                            check="false"
-                            onclick={this.handleClick}
-                        />
-                    )
-                })}
-            </div>
-        )
+
+            {this.state.cardImages.map(card => (
+                <Card
+                    Clicked={this.state.Clicked}
+                    handleClick={this.handleClick}
+                    id={card.id}
+                    key={card.id}
+                    />
+            ))}
+        //     <div className="card" >
+        //         {cardImages
+        //         .sort(() => Math.random() - 0.5)
+        //         .map((element) => {
+        //             return (
+        //                 <div
+        //                     className="image card-backside"
+        //                     name={element.name}
+        //                     style={{ background: `url(${element.pic})` }}
+        //                     check="false"
+        //                     onclick={this.handleClick}
+        //                 />
+        //             )
+        //         })}
+        //     </div>
+        // )
     }
 }
 export default CardsContainer;
