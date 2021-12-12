@@ -12,7 +12,8 @@ class CardsContainer extends Component {
     cards = [] 
     
     state ={
-        turns: 0
+        turns: 0,
+        setCards: []
     }
 
     //function for shuffling cards at start of a new game
