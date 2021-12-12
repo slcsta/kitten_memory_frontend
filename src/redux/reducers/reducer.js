@@ -6,7 +6,6 @@
 
 export default function reducer(state = {
     scores: [], 
-    cards: [],
     loading: false
 }, action) {
  switch(action.type) {

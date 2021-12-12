@@ -20,7 +20,10 @@ export default function CardsContainer() {
 
     const cards = cardsObj.cardImages.map(card => < Card key={card.id} image={card.image} /> )
         return ( 
-            <div>
+            <div className="card" >
+                {cardImages
+                .sort(() => Math.random() - 0.5)
+                }
                 <h1>Kitten Memory Game</h1>
                 {cards}
             </div>

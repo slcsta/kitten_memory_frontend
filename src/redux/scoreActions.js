@@ -39,8 +39,10 @@ export const addScore = (score) => {
             },
             body: JSON.stringify(score)
         })
-        .then(r => r.json())
-        .then(score => dispatch({type: "ADD_SCORE", payload: score}))
+        .then(() => {console.log('new score added')})
+        // .then(r => r.json())
+        // .then(score => dispatch({type: "ADD_SCORE", payload: score}))
+        // .then(score => dispatch({type: "ADD_SCORE", payload: score}))
     }
 }
     

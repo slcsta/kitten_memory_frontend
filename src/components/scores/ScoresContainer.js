@@ -22,8 +22,8 @@ class ScoresContainer extends React.Component {
                 <h2>All Scores</h2>
                 {/* <ScoreForm /> */}
                 <Switch>
-                    <Route eact path="/scores/new"component={routerProps => <ScoreForm /> } />
-                </Switch>
+                    <Route exact path="/scores/new"component={routerProps => <ScoreForm /> } />
+                </Switch> 
                 <div>
                     {this.props.scores.map(score => <p key={score.id}>{score.username}</p>)}
                 </div>
