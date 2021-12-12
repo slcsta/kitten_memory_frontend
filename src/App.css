@@ -60,6 +60,14 @@ body {
 }
 
 .image-backside {
+  background: pink;
+  background-size: contain;
+  height: 120px;
+  width: 120px;
+  border-radius: 5px;
+  box-shadow: 3px 4px grey;
+  padding: 10px;
+  margin: 10px;
 
 }
 

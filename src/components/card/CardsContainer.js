@@ -11,14 +11,9 @@ class CardsContainer extends React.Component () {
     // state ={
     //     Turns: 0,
     // }
-    //function for shuffling cards at start of a new game
-    // shuffleCards = () => {
-    //     const shuffledCards = [...cardsObj.cardImages, ...cardsObj.cardImages]
-    //     .sort(() => Math.random() - 0.5)
-    //     .map((card) => ({ ...card, id: Math.random() }))
-    //     CardsContainer(shuffledCards)
-    // }
     //const cards = cardsObj.cardImages.map(card => < Card key={card.id} image={card.image} /> )
+
+    // add onClick to handle function of clicking cards
     render() {    
         return ( 
             <div className="card" >
