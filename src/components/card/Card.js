@@ -28,11 +28,9 @@ import React from 'react'
 export default function Card(props) {
     const {id, image} = props.card   
     return (
-        <div className="card" id={`card-${id}`}>
-            <div className="kitten-avatar">
-                <img alt={props.id} src={props.image} />
-           </div>
-            </div>
+        <div className="card" id={`cardImages-${id}`}>
+            <img src={image} alt="" className="kitten-avatar" />
+        </div>
         )
             // this code is checking if clicked, then animate else not
          // <div className={"card" + (props.Clicked ? "animate" : "")} onClick={() => props.handleClick(props.id)} >

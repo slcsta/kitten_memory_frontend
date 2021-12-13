@@ -3,24 +3,33 @@
 //import { render } from '@testing-library/react';
 import React from 'react';
 import cardsObj from '../../database';
-import Card from './Card';
+//import Card from './Card';
 
 class CardsContainer extends React.Component {
     // add empty cards array for pushing cards after they are checked
-    cardsArray = [] 
+     
     
     state = {
+        shuffledCards: [],
+        cards: [],
+        turns: 0
+        //setCards: ""
         // turns: 0,
         // clicked: false
     };
+    // makeCards function does 3 things:
+    // 1. duplicate cards
+    // 2. randomize order of cards using sort
+    // 3. assign an id to each image
 
     makeCards() {
-        // destructuring
-        //const cards = cardsObj.cardImages.map(card => < Card key={card.id} image={card.image} /> )
+        this.state.shuffledCards = [...cardsObj.cardImages, ...cardsObj.cardImages]
+        .sort(() => Math.random() - 0.5)
+        .map(card => ({ ...card, id: Math.random() }))
         //const cards = cardsObj.cardImages.map(card => <Card id={card.id} image={card.image} /> )
-        const cards = cardsObj.cardImages.map(card => <Card card={card}/>) 
+        //const cards = cardsObj.cardImages.map(card => <Card card={card}/>) 
         //b/c just a function have to explicitly returned b/c return value is currently undefined so i will explicitly return cards for now
-        return cards
+        //return cards
     }
     
 
@@ -38,16 +47,16 @@ class CardsContainer extends React.Component {
     //     this.setState({ shuffledCards });
     // }
 
-    handleTurns = e => {
-        //setting state method to update component's state
-        this.setState({ turns: this.state.turns + 1 });
-    }
+    // handleTurns = e => {
+    //     //setting state method to update component's state
+    //     this.setState({ turns: this.state.turns + 1 });
+    // }
 
     // need randomizing function for shuffle cards
 
     //if card match occurs then push to array
         
-    }
+    
     //<div className="card" id={`cardImages-${props.id}`}>
     //             <img src={props.image} alt={props.description} className="kitten-avatar"/>
     //         </div>
@@ -62,7 +71,7 @@ class CardsContainer extends React.Component {
         )
     }
 }
-export default CardsContainer;
+export default CardsContainer
     
 
             // state.cardImages.map(card => (
