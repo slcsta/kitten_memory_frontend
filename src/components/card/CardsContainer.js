@@ -5,7 +5,7 @@ import React from 'react';
 import cardImages from '../../database';
 import Card from './Card';
 
-class CardsContainer extends React.Component () {
+class CardsContainer extends React.Component {
     // add empty cards array for pushing cards after they are checked
     cardsArray = [] 
     
@@ -14,9 +14,14 @@ class CardsContainer extends React.Component () {
         turns: 0,
         clicked: false
     };
-    // destructuring
-    //const cards = cardsObj.cardImages.map(card => < Card key={card.id} image={card.image} /> )
-    //const cards = cardsObj.cardImages.map(card => <Card card={card}/>) 
+
+    makeCards () {
+        // destructuring
+        //const cards = cardsObj.cardImages.map(card => < Card key={card.id} image={card.image} /> )
+        //const cards = cardsObj.cardImages.map(card => <Card id={card.id} image={card.image} /> )
+        const cards = cardsObj.cardImages.map(card => <Card card={card}/>) 
+    }
+    
 
     // add onClick to handle function of clicking cards
     handleClick = e => {
@@ -46,18 +51,29 @@ class CardsContainer extends React.Component () {
     //             <img src={props.image} alt={props.description} className="kitten-avatar"/>
     //         </div>
 
+    // inside of this func b/c of scope we no longer have access to the const cards so jus returning/rendering {cards}
+    // won't work. we need to call the function makeCards
     render() {    
         return ( 
-            <Wrapper>
-            {this.state.cardImages.map(card => (
-                <Card
-                    Clicked={this.state.Clicked}
-                    handleClick={this.handleClick}
-                    id={card.id}
-                    key={card.id}
-                    />
-            ))}
-            </Wrapper>
+            <div id="card-container">
+                <div>
+                    
+                </div>
+                {this.makeCards}
+            </div>
+        )
+    }
+}
+export default CardsContainer;
+    
+
+            // state.cardImages.map(card => (
+            //     <Card
+            //         Clicked={this.state.Clicked}
+            //         handleClick={this.handleClick}
+            //         id={card.id}
+            //         key={card.id}
+            //         />
         //     <div className="card" >
         //         {cardImages
         //         .sort(() => Math.random() - 0.5)
@@ -73,7 +89,4 @@ class CardsContainer extends React.Component () {
         //             )
         //         })}
         //     </div>
-    )
-}
-}
-export default CardsContainer;
+    

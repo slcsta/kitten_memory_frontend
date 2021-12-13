@@ -34,6 +34,6 @@ export default function Card(props) {
            </div>
             </div>
         )
-            // checking if clicked, then animate else not
+            // this code is checking if clicked, then animate else not
          // <div className={"card" + (props.Clicked ? "animate" : "")} onClick={() => props.handleClick(props.id)} >
 }
