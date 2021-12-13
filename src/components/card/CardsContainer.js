@@ -21,11 +21,15 @@ class CardsContainer extends React.Component {
     // 1. duplicate cards
     // 2. randomize order of cards using sort
     // 3. assign an id to each image
+    handleClick = e => {
+        this.setState({shuffledCards: e.target.value})
+        return
+    }
 
     makeCards = () => {
-        this.setState({shuffledCards: [...cardImages, ...cardImages]
+        this.shuffledCards = [...cardImages, ...cardImages]
         .sort(() => Math.random() - 0.5)
-        .map(card => ({ ...card, id: Math.random() }))})
+        .map(card => ({ ...card, id: Math.random() }))
         //const cards = cardsObj.cardImages.map(card => <Card id={card.id} image={card.image} /> )
         //const cards = cardsObj.cardImages.map(card => <Card card={card}/>) 
         //b/c just a function have to explicitly returned b/c return value is currently undefined so i will explicitly return cards for now
@@ -74,8 +78,7 @@ class CardsContainer extends React.Component {
         return ( 
             <div>
                 <h1>Kitten Memory</h1>
-                <button onClick={this.makeCards()}>Start Game</button>
-                
+                <button onClick={this.handleClick}>Start Game</button>                
             </div>
         )
     }

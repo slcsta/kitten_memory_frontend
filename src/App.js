@@ -3,6 +3,7 @@
 import './App.css';
 import { NavLink } from 'react-router-dom';
 import Pages from './components/Pages'
+import CardsContainer from './components/card/CardsContainer';
 
 //import CardsContainer from './components/card/CardsContainer';
 
