@@ -1,5 +1,5 @@
-// let cardsObj = {
-    let cardImages = [
+let cardsObj = {
+    "cardImages": [
         {
             "id": 1,
             "image": "https://hips.hearstapps.com/clv.h-cdn.co/assets/15/33/1024x677/gettyimages-124237377.jpg?resize=980:*",
@@ -25,6 +25,6 @@
             "image": "https://hips.hearstapps.com/clv.h-cdn.co/assets/15/33/1024x677/gettyimages-501542925.jpg?resize=980:*",
         },
     ]
-// }
+ }
 
-export default cardImages;
+export default cardsObj;

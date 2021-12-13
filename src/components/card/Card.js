@@ -24,13 +24,16 @@ import React from 'react'
 
 // // right now this is a functional component
 // // so we pass props in as an argument
-// checking if clicked, then animate else not
+
 export default function Card(props) {
-        return (
-        <div className={"card" + (props.Clicked ? "animate" : "")} onClick={() => props.handleClick(props.id)} >
+    const {id, image} = props.card   
+    return (
+        <div className="card" id={`card-${id}`}>
             <div className="kitten-avatar">
                 <img alt={props.name} src={props.image} />
            </div>
             </div>
         )
+            // checking if clicked, then animate else not
+         // <div className={"card" + (props.Clicked ? "animate" : "")} onClick={() => props.handleClick(props.id)} >
 }

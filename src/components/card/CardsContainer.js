@@ -14,9 +14,10 @@ class CardsContainer extends React.Component () {
         turns: 0,
         clicked: false
     };
-    
+    // destructuring
     //const cards = cardsObj.cardImages.map(card => < Card key={card.id} image={card.image} /> )
-   
+    //const cards = cardsObj.cardImages.map(card => <Card card={card}/>) 
+
     // add onClick to handle function of clicking cards
     handleClick = e => {
         let card = e.target;

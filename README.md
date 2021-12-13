@@ -1,5 +1,5 @@
 
-Kitten Memory is SPA that provides a simple game of memory with kittens. A user is tasked with finding all card-matching kittens. Scores are recorded via how many attempts it takes to find all matches. See the backend here: https://github.com/slcsta/kitten_memory_backend. This is the React-Redux front end.
+Kitten Memory is a SPA that provides a simple game of memory with kittens. A user is tasked with finding all card-matching kittens. Scores are recorded via how many attempts it takes to find all matches. See the backend here: https://github.com/slcsta/kitten_memory_backend. This is the React-Redux front end.
 
 ## Getting Started
 Make sure you have the following tools installed on your system:
