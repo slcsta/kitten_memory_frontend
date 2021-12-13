@@ -78,8 +78,19 @@ class CardsContainer extends React.Component {
         return ( 
             <div>
                 <h1>Kitten Memory</h1>
-                <button onClick={this.handleClick}>Start Game</button>                
+                <button onClick={this.handleClick}>Start Game</button>
+
+                <div className="container">
+                    {this.shuffledCards.map(card => (
+                        <div className="card" key={card.id}>
+                        <div>
+                            <img className="front" src={card.src} alt="card front" />
+                            <img className="back" src="/"{card.src} alt="card front" />
+                        </div>
+                        </div>  
+                ))}               
             </div>
+            </div> 
         )
     }
 }
