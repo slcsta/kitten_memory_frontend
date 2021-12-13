@@ -2,7 +2,7 @@
 // making this image container dynamic
 //import { render } from '@testing-library/react';
 import React from 'react';
-import cardImages from '../../database';
+import cardsObj from '../../database';
 import Card from './Card';
 
 class CardsContainer extends React.Component {
@@ -10,32 +10,33 @@ class CardsContainer extends React.Component {
     cardsArray = [] 
     
     state = {
-        cardImages,
-        turns: 0,
-        clicked: false
+        // turns: 0,
+        // clicked: false
     };
 
-    makeCards () {
+    makeCards() {
         // destructuring
         //const cards = cardsObj.cardImages.map(card => < Card key={card.id} image={card.image} /> )
         //const cards = cardsObj.cardImages.map(card => <Card id={card.id} image={card.image} /> )
         const cards = cardsObj.cardImages.map(card => <Card card={card}/>) 
+        //b/c just a function have to explicitly returned b/c return value is currently undefined so i will explicitly return cards for now
+        return cards
     }
     
 
     // add onClick to handle function of clicking cards
-    handleClick = e => {
-        let card = e.target;
-        if (card.getAttribute("check") === "found") {
-            return
-        } 
+    // handleClick = e => {
+    //     let card = e.target;
+    //     if (card.getAttribute("check") === "found") {
+    //         return
+    //     } 
     
-    shuffleCards = () => {
-        //shuffly array of images
-        const shuffledCards = this.shuffle(this.state.cards);
-        // seeting 'shuffledCards' as the new sate
-        this.setState({ shuffledCards });
-    }
+    // shuffleCards = () => {
+    //     //shuffly array of images
+    //     const shuffledCards = this.shuffle(this.state.cards);
+    //     // seeting 'shuffledCards' as the new sate
+    //     this.setState({ shuffledCards });
+    // }
 
     handleTurns = e => {
         //setting state method to update component's state
@@ -55,11 +56,8 @@ class CardsContainer extends React.Component {
     // won't work. we need to call the function makeCards
     render() {    
         return ( 
-            <div id="card-container">
-                <div>
-                    
-                </div>
-                {this.makeCards}
+            <div id="container">
+                {this.makeCards()}
             </div>
         )
     }

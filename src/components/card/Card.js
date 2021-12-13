@@ -30,7 +30,7 @@ export default function Card(props) {
     return (
         <div className="card" id={`card-${id}`}>
             <div className="kitten-avatar">
-                <img alt={props.name} src={props.image} />
+                <img alt={props.id} src={props.image} />
            </div>
             </div>
         )
