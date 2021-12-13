@@ -2,7 +2,7 @@
 // making this image container dynamic
 //import { render } from '@testing-library/react';
 import React from 'react';
-import cardsObj from '../../database';
+import cardImages from '../../database';
 //import Card from './Card';
 
 class CardsContainer extends React.Component {
@@ -22,14 +22,21 @@ class CardsContainer extends React.Component {
     // 2. randomize order of cards using sort
     // 3. assign an id to each image
 
-    makeCards() {
-        this.state.shuffledCards = [...cardsObj.cardImages, ...cardsObj.cardImages]
+    makeCards = () => {
+        this.setState({shuffledCards: [...cardImages, ...cardImages]
         .sort(() => Math.random() - 0.5)
-        .map(card => ({ ...card, id: Math.random() }))
+        .map(card => ({ ...card, id: Math.random() }))})
         //const cards = cardsObj.cardImages.map(card => <Card id={card.id} image={card.image} /> )
         //const cards = cardsObj.cardImages.map(card => <Card card={card}/>) 
         //b/c just a function have to explicitly returned b/c return value is currently undefined so i will explicitly return cards for now
         //return cards
+
+        //setState is a very specific function 
+        //thatn will rerender our new state
+
+        //in this function we will setCards
+        //and setTurns
+        // every time we start a new game want to call function of makeCards
     }
     
 
@@ -65,8 +72,10 @@ class CardsContainer extends React.Component {
     // won't work. we need to call the function makeCards
     render() {    
         return ( 
-            <div id="container">
-                {this.makeCards()}
+            <div>
+                <h1>Kitten Memory</h1>
+                <button onClick={this.makeCards()}>Start Game</button>
+                
             </div>
         )
     }

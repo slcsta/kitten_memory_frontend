@@ -15,6 +15,7 @@ function App() {
       <NavLink to="/cards">Cards</NavLink>
       <br />
       <Pages />
+      <CardsContainer />
     </div>
   );
 }
