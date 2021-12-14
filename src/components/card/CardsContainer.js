@@ -7,10 +7,9 @@ import cardImages from '../../database';
 
 class CardsContainer extends React.Component {
     // add empty cards array for pushing cards after they are checked
-     
     
     state = {
-        cards: [...cardImages, ...cardImages],
+        cards: [],
         turns: 0
         //setCards: ""
         // turns: 0,
@@ -19,18 +18,34 @@ class CardsContainer extends React.Component {
     // makeCards function does 3 things:
     // 1. duplicate cards
     // 2. randomize order of cards using sort
-    // 3. assign an id to each image
+    // 3. assign an id to each image - use id in react to output in a list
     
+    // handleClick = (e) => {
+    //     e.this.shuffleArray()
+    // }
+
+    // shuffleArray = () => {
+    //     const shuffledArray = this.shuffle(this.state.cards)
+    //     this.setState({ shuffledArray})
+    // }
+
+    // shuffle = () => {
+    //     const imagesArray = [...cardImages, ...cardImages]
+    //     imagesArray.sort(() => Math.random() - 0.5)
+    //     .map((card) => ({ ...card, id: Math.random() }))
+    //     return imagesArray
+    // }
     
-    handleClick = (e) => {
-        this.setState({ shuffledCards: e.target.value })
-        return
-    }
+    // handleClick = (e) => {
+    //     this.setState({ shuffledCards: e.target.value })
+    // }
 
     shuffleCards = () => {
-        const shuffledCards = this.cards.sort(() => Math.random() - 0.5)
-        .map((card) => ({ ...card, id: Math.random() }))
-        return shuffledCards
+        let shuffledCards = [...cardImages, ...cardImages]
+            .sort(() => Math.random() - 0.5)
+            .map((card) => ({ ...card, id: Math.random() }))
+            this.setState({ cards: shuffledCards })
+            return
     }
 
     // shuffleCards = () => {
@@ -64,11 +79,9 @@ class CardsContainer extends React.Component {
         
     render() {    
         return ( 
-    
             <div className="App">
                 <h1>Kitten Memory</h1>
-                <button onClick={this.handleClick}>Start Game</button>
-
+                <button onClick={this.shuffleCards}>Start Game</button>
                  <div className="card-grid">
                      {this.state.cards.map(card => (
                         <div className="card" key={card.id}>
