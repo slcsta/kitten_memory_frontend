@@ -11,7 +11,6 @@ class CardsContainer extends React.Component {
     
     state = {
         shuffledCards: [],
-        cards: [],
         turns: 0
         //setCards: ""
         // turns: 0,
@@ -21,16 +20,19 @@ class CardsContainer extends React.Component {
     // 1. duplicate cards
     // 2. randomize order of cards using sort
     // 3. assign an id to each image
-    handleClick = e => {
-        this.setState({shuffledCards: e.target.value})
-        console.log(this.state)
+    
+    
+    handleClick = (e) => {
+        this.setState({ shuffledCards: e.target.value })
         return
     }
 
-    makeCards = () => {
-        this.shuffledCards = [...cardImages, ...cardImages]
-        .sort(() => Math.random() - 0.5)
-        .map(card => ({ ...card, id: Math.random() }))
+    shuffleCards = () => {
+        let shuffledCards = [...cardImages, ...cardImages]
+            .sort(() => Math.random() - 0.5)
+            .map((card) => ({ ...card, id: Math.random() }))
+
+            //this.setState({shuffledCards})
         //const cards = cardsObj.cardImages.map(card => <Card id={card.id} image={card.image} /> )
         //const cards = cardsObj.cardImages.map(card => <Card card={card}/>) 
         //b/c just a function have to explicitly returned b/c return value is currently undefined so i will explicitly return cards for now
@@ -42,7 +44,8 @@ class CardsContainer extends React.Component {
         //in this function we will setCards
         //and setTurns
         // every time we start a new game want to call function of makeCards
-    }
+        
+    
 
     
     
@@ -79,12 +82,13 @@ class CardsContainer extends React.Component {
     // won't work. we need to call the function makeCards
     render() {    
         return ( 
-            <div className="App">
+    
+            <div className="CardsContainer">
                 <h1>Kitten Memory</h1>
-                <button onClick={this.onClick}>Start Game</button>
+                <button onClick={this.handleClick} >Start Game  </button>
 
-                <div className="card-grid">
-                    {this.shuffledCards.map(card => (
+                 <div className="card-grid">
+                     {this.shuffledCards.map(card => (
                         <div className="card" key={card.id}>
                         <div>
                             <img className="front" src={card.image} alt="card front" />
