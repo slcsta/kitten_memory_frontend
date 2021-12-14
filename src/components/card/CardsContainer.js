@@ -23,6 +23,7 @@ class CardsContainer extends React.Component {
     // 3. assign an id to each image
     handleClick = e => {
         this.setState({shuffledCards: e.target.value})
+        console.log(this.state)
         return
     }
 
@@ -42,6 +43,8 @@ class CardsContainer extends React.Component {
         //and setTurns
         // every time we start a new game want to call function of makeCards
     }
+
+    
     
 
     // add onClick to handle function of clicking cards
@@ -76,16 +79,16 @@ class CardsContainer extends React.Component {
     // won't work. we need to call the function makeCards
     render() {    
         return ( 
-            <div>
+            <div className="App">
                 <h1>Kitten Memory</h1>
-                <button onClick={this.handleClick}>Start Game</button>
+                <button onClick={this.onClick}>Start Game</button>
 
-                <div className="container">
+                <div className="card-grid">
                     {this.shuffledCards.map(card => (
                         <div className="card" key={card.id}>
                         <div>
-                            <img className="front" src={card.src} alt="card front" />
-                            <img className="back" src="/"{card.src} alt="card front" />
+                            <img className="front" src={card.image} alt="card front" />
+                            <img className="back" src="/" alt="card back" />
                         </div>
                         </div>  
                 ))}               
