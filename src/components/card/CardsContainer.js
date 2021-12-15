@@ -15,7 +15,7 @@ class CardsContainer extends React.Component {
         // turns: 0,
         // clicked: false
     };
-    // makeCards function does 3 things:
+    // shufflecard function does 3 things:
     // 1. duplicate cards
     // 2. randomize order of cards using sort
     // 3. assign an id to each image - use id in react to output in a list
@@ -84,12 +84,7 @@ class CardsContainer extends React.Component {
                 <button onClick={this.shuffleCards}>Start Game</button>
                  <div className="card-grid">
                      {this.state.cards.map(card => (
-                        <div className="card" key={card.id}>
-                            <div>
-                                <img className="front" src={card.src} alt="card front" />
-                                <img className="back" src="./images/Fotolia_86039271_XStopng.png" alt="card back" />
-                            </div>
-                        </div>  
+                       
                 ))}               
                 </div>
             </div> 

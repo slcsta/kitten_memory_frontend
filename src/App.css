@@ -54,32 +54,28 @@ button:hover {
 
 .card {
   justify-self: center;
-  border: grey solid 2px;
-  padding: .3rem;
-  height: 7rem;
-  width: 11rem;
-  /* display: inline-grid; */
-  margin: 1rem 1rem;
-  box-shadow: 3px 4px grey
+  border: grey solid 1px;
+  /* padding: .3rem; */
+  height: 10rem;
+  width: 15rem;
+  display: inline-grid;
+  /* margin: 1rem 1rem; */
+  box-shadow: 3px 4px grey 
 }
 
-.container {
+/* .container {
   padding: 1rem;
   width: contain;
   height: contain;
   display: none;
   background: #515DA2;
   opacity: .8;
-}
+} */
 
-.src {
-  background-size: contain;
-  height: contain;
-  width: contain;
-  border-radius: 5px;
-  box-shadow: 3px 4px grey;
-  padding: 10px;
-  margin: 10px;
+.img {
+  /* width: 11rem;
+  height: 7rem; */
+  object-fit: cover;
 }
 
 /* .image-backside {

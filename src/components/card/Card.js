@@ -19,15 +19,22 @@
 // use one card and dynamically populate our cards
 // how do i pass props into a functional component?
 // with an argument 
-
 import React from 'react'  
-
-// // right now this is a functional component
-// // so we pass props in as an argument
+import './Card.css'
+// right now this is a functional component
+// so we pass props in as an argument
 
 export default function Card(props) {
     const {id, image} = props.card   
     return (
+
+        <div className="card" key={card.id}>
+        <div>
+            <img className="card" src={card.src} alt="card front" />
+            <img className="card" src="./images/kittylandscapetopng.png" alt="card back" />
+        </div>
+    </div>  
+    
         <div className="card" id={`cardImages-${id}`}>
             <img src={image} alt="" className="kitten-avatar" />
         </div>
