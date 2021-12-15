@@ -36,7 +36,7 @@ class CardsContainer extends React.Component {
     handleChoice = (card) => {
         // if choiceOne ? is null, it will evaluate to false and we will set choice 2
         // if choiceOne ? is not null, it will evaluate to true and we will set choice 1
-        choiceOne ? this.setState({ choiceTwo: card : choiceOne: card})
+        this.state.choiceOne ? this.setState({ choiceTwo: card}) : this.setState({ choiceOne: card })
         // if it already has a value, we've already selected choice 1
         // if it doesn't yet have a value, we haven't yet selected choice 1
 
@@ -66,7 +66,7 @@ class CardsContainer extends React.Component {
                         <Card 
                             key={card.id} 
                             card={card} 
-                            handleChoice={handleChoice}
+                            handleChoice={this.handleChoice}
                         />
                 ))}               
                 </div>

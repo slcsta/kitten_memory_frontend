@@ -7,7 +7,7 @@ import './Card.css'
 export default function Card({ card, handleChoice }) {
     // const {id, image} = props.card  
     // handle click func for clicking cards - need to add state change to cards container comp
-    const handleClick = () => {
+    let handleClick = () => {
         handleChoice(card)
     }
 
