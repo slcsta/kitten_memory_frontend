@@ -19,12 +19,13 @@ class ScoreForm extends Component {
     // defined below
 
     handleChange = e => {
+        //console.log(e.target.value)
         this.setState({username: e.target.value})
         return 
     }
 
     handleSubmit = e => {
-        e.preventDefualt()
+        //e.preventDefualt()
         // dispatch my action to addScore
         this.props.dispatchAddScore(this.state)
         // then clear out my state

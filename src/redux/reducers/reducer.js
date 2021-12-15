@@ -4,9 +4,8 @@
 // first return state and spread state
 // this action will come from our action creator and that is dispatched inside the action creator
 
-export default function reducer(state = {
+function reducer(state = {
     scores: [], 
-    loading: false
 }, action) {
  switch(action.type) {
     case "SET_SCORES":
@@ -20,7 +19,7 @@ export default function reducer(state = {
 
         return {
             ...state,
-            score: [...state.scores, action.payload]
+            scores: [...state.scores, action.payload]
         };
     
     // case "SET_CARDS":
@@ -41,3 +40,5 @@ export default function reducer(state = {
          return state;
  }
 }
+
+export default reducer;

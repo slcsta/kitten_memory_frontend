@@ -13,7 +13,7 @@ import ScoreForm from './ScoreForm';
 class ScoresContainer extends React.Component {
     
     componentDidMount(){
-        this.props.dispatchSetScore()
+        this.props.dispatchSetScores()
     }
      
     render(){
@@ -37,7 +37,7 @@ function mapStateToProps(stateFromStore){
 
 function mapDispatchToProps(dispatch){
     return {
-        dispatchSetScore: () => dispatch(setScores())
+        dispatchSetScores: () => dispatch(setScores())
 
     }
 }

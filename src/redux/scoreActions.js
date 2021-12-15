@@ -14,23 +14,18 @@ export const setScores = () => {
     }
 }
 
-// add score via a form and allow score to have a name
-// action creators always functions
-// async logic to add a score
-// my async logic here will be the post request as a fetch sent to the backend
-// so for that async logic we will use redux thunk
+
 // here I am sending a post request and will utilize thunk and return a function
 // comma and then object as an argument b/c i'm sending data to my backend
 // need a method as a key to explicityly tell that this object is a post request
 // headers telling my backend what i expect to get back
-// what am i stringifying here? for the body
-// do i have access to score? need to pass in the argument of score ad my score object
-// then lets parse out the response
-// second then response is where i am dispatching to my store - lots of questions here
+// need to pass in arg of score as my score object
+// second then response is where i am dispatching to my store
 
 // add score
 export const addScore = (score) => {
     return (dispatch) => {
+        console.log()
         fetch("http://localhost:3000/scores", { 
             method: "POST",
             headers: {
@@ -39,10 +34,9 @@ export const addScore = (score) => {
             },
             body: JSON.stringify(score)
         })
-        .then(() => {console.log('new score added')})
-        // .then(r => r.json())
-        // .then(score => dispatch({type: "ADD_SCORE", payload: score}))
-        // .then(score => dispatch({type: "ADD_SCORE", payload: score}))
+        .then(r => r.json())
+        .then(score => dispatch({type: "ADD_SCORE", payload: score}))
+        //.then(() => {console.log('new score added')})
     }
 }
     
