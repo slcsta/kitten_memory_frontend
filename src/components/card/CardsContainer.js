@@ -3,7 +3,7 @@
 //import { render } from '@testing-library/react';
 import React from 'react';
 import cardImages from '../../database';
-//import Card from './Card';
+import Card from './Card';
 
 class CardsContainer extends React.Component {
     // add empty cards array for pushing cards after they are checked
@@ -20,26 +20,6 @@ class CardsContainer extends React.Component {
     // 2. randomize order of cards using sort
     // 3. assign an id to each image - use id in react to output in a list
     
-    // handleClick = (e) => {
-    //     e.this.shuffleArray()
-    // }
-
-    // shuffleArray = () => {
-    //     const shuffledArray = this.shuffle(this.state.cards)
-    //     this.setState({ shuffledArray})
-    // }
-
-    // shuffle = () => {
-    //     const imagesArray = [...cardImages, ...cardImages]
-    //     imagesArray.sort(() => Math.random() - 0.5)
-    //     .map((card) => ({ ...card, id: Math.random() }))
-    //     return imagesArray
-    // }
-    
-    // handleClick = (e) => {
-    //     this.setState({ shuffledCards: e.target.value })
-    // }
-
     shuffleCards = () => {
         let shuffledCards = [...cardImages, ...cardImages]
             .sort(() => Math.random() - 0.5)
@@ -74,17 +54,17 @@ class CardsContainer extends React.Component {
     //     //setting state method to update component's state
     //     this.setState({ turns: this.state.turns + 1 });
     // }
-
     //if card match occurs then push to array
-        
+    
+    // pass down a prop in the map function so I have access to it in Card component    
     render() {    
         return ( 
             <div className="App">
                 <h1>Kitten Memory</h1>
                 <button onClick={this.shuffleCards}>Start Game</button>
                  <div className="card-grid">
-                     {this.state.cards.map(card => (
-                       
+                    {this.state.cards.map(card => (
+                        <Card key={card.id} card={card} />
                 ))}               
                 </div>
             </div> 
