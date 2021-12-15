@@ -34,7 +34,11 @@ class CardsContainer extends React.Component {
     }
 
     handleChoice = (card) => {
-        console.log(card)
+        // if choiceOne ? is null, it will evaluate to false and we will set choice 2
+        // if choiceOne ? is not null, it will evaluate to true and we will set choice 1
+        choiceOne ? this.setState({ choiceTwo: card : choiceOne: card})
+        // if it already has a value, we've already selected choice 1
+        // if it doesn't yet have a value, we haven't yet selected choice 1
 
     }
 
@@ -50,7 +54,7 @@ class CardsContainer extends React.Component {
     //     this.setState({ turns: this.state.turns + 1 });
     // }
     //if card match occurs then push to array
-    
+    //below i will pass in a prop of handleChoic to the Card component
     // pass down a prop in the map function so I have access to it in Card component    
     render() {    
         return ( 
@@ -60,8 +64,10 @@ class CardsContainer extends React.Component {
                  <div className="card-grid">
                     {this.state.cards.map(card => (
                         <Card 
-                        key={card.id} 
-                        card={card} />
+                            key={card.id} 
+                            card={card} 
+                            handleChoice={handleChoice}
+                        />
                 ))}               
                 </div>
             </div> 
