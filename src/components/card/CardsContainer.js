@@ -34,6 +34,18 @@ class CardsContainer extends React.Component {
             return
     }
 
+    //compare two selected cards to see if they match
+    isMatching = (card1, card2) => {
+        if (card1.getAttribute("name") === card2.getAttribute("name")) {
+            
+        }
+        return true
+    }
+        else{
+            return false
+        }
+    }
+
     // card choice for two selections
     handleChoice = (card) => {
         // if choiceOne ? is null, it will evaluate to false and we will set choice 2
@@ -45,12 +57,10 @@ class CardsContainer extends React.Component {
     }
 
     // reset choices if no match & increase turns
-
     resetTurn = () => {
         this.setState({ choiceTwo: null})
         this.setState({ choiceOne: null })
         this.setState(prevTurns => prevTurns + 1)
-
     }
 
     // add onClick to handle function of clicking cards
