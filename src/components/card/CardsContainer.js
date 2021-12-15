@@ -30,15 +30,26 @@ class CardsContainer extends React.Component {
             .sort(() => Math.random() - 0.5)
             .map((card) => ({ ...card, id: Math.random() }))
             this.setState({ cards: shuffledCards })
+            this.setState({ turns: 0 })
             return
     }
 
+    // card choice for two selections
     handleChoice = (card) => {
         // if choiceOne ? is null, it will evaluate to false and we will set choice 2
         // if choiceOne ? is not null, it will evaluate to true and we will set choice 1
         this.state.choiceOne ? this.setState({ choiceTwo: card}) : this.setState({ choiceOne: card })
         // if it already has a value, we've already selected choice 1
         // if it doesn't yet have a value, we haven't yet selected choice 1
+
+    }
+
+    // reset choices if no match & increase turns
+
+    resetTurn = () => {
+        this.setState({ choiceTwo: null})
+        this.setState({ choiceOne: null })
+        this.setState(prevTurns => prevTurns + 1)
 
     }
 
