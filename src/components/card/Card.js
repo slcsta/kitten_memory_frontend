@@ -10,7 +10,11 @@ export default function Card({ card }) {
         <div className="card">
             <div>
                 <img className="card" src={card.src} alt="card front" />
-                <img className="card" src="./images/kittylandscapetopng.png" alt="card back" />
+                <img 
+                    className="card" 
+                    src="/images/kittylandscapetopng.png" 
+                    onClick={handleClick}
+                    alt="card back" />
             </div>
         </div>  
 

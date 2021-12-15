@@ -10,15 +10,17 @@ class CardsContainer extends React.Component {
     
     state = {
         cards: [],
-        turns: 0
-        //setCards: ""
-        // turns: 0,
+        turns: 0,
+        choiceOne: null,
+        choiceTwo: null
         // clicked: false
     };
     // shufflecard function does 3 things:
     // 1. duplicate cards
     // 2. randomize order of cards using sort
     // 3. assign an id to each image - use id in react to output in a list
+    // setState is a very specific function that will rerender our new state
+    // every time we start a new game want to call function of shuffle cards
     
     shuffleCards = () => {
         let shuffledCards = [...cardImages, ...cardImages]
@@ -27,21 +29,6 @@ class CardsContainer extends React.Component {
             this.setState({ cards: shuffledCards })
             return
     }
-
-    // shuffleCards = () => {
-    //     let shuffledCards = [...cardImages, ...cardImages]
-    //         .sort(() => Math.random() - 0.5)
-    //         .map((card) => ({ ...card, id: Math.random() }))
-
-    // shuffleCards = () => {
-    //     //shuffly array of images
-    //     const shuffledCards = this.shuffle(this.state.cards);
-    //     // setting 'shuffledCards' as the new sate
-    //     this.setState({ shuffledCards });
-    // }
-
-        //setState is a very specific function that will rerender our new state
-        // every time we start a new game want to call function of shuffle cards
 
     // add onClick to handle function of clicking cards
     // handleClick = e => {
