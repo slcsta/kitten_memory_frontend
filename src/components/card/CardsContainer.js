@@ -33,6 +33,11 @@ class CardsContainer extends React.Component {
             return
     }
 
+    handleChoice = (card) => {
+        console.log(card)
+
+    }
+
     // add onClick to handle function of clicking cards
     // handleClick = e => {
     //     let card = e.target;
@@ -54,7 +59,9 @@ class CardsContainer extends React.Component {
                 <button onClick={this.shuffleCards}>Start Game</button>
                  <div className="card-grid">
                     {this.state.cards.map(card => (
-                        <Card key={card.id} card={card} />
+                        <Card 
+                        key={card.id} 
+                        card={card} />
                 ))}               
                 </div>
             </div> 
