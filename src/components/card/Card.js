@@ -5,7 +5,12 @@ import './Card.css'
 //functional component
 //then we can pass in props at top as card - by destructuring it in cards container
 export default function Card({ card }) {
-    // const {id, image} = props.card   
+    // const {id, image} = props.card  
+    // handle click func for clicking cards - need to add state change to cards container comp
+    const handleClick = () => {
+
+    }
+
     return (
         <div className="card">
             <div>

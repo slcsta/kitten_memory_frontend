@@ -15,6 +15,9 @@ class CardsContainer extends React.Component {
         choiceTwo: null
         // clicked: false
     };
+
+    // need to update state here for the clicke event in card comp
+
     // shufflecard function does 3 things:
     // 1. duplicate cards
     // 2. randomize order of cards using sort
