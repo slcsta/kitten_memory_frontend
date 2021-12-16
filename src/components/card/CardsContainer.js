@@ -39,6 +39,14 @@ class CardsContainer extends React.Component {
         useEffect(() => {
             if(choiceOne && choiceTwo) {
 
+                if choiceOne.src === choiceTwo.src {
+                    console.log('it's a match')
+                    resetTurn()
+                } else {
+                    console.log('not a match')
+                    resetTurn()
+                }
+
             }
         } [choicOne, choiceTwo])
     
