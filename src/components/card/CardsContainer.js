@@ -34,10 +34,22 @@ class CardsContainer extends React.Component {
             return
     }
 
+    /* video example with hooks
+    
+        useEffect(() => {
+            if(choiceOne && choiceTwo) {
+
+            }
+        } [choicOne, choiceTwo])
+    
+    */
+
+
+
     //compare two selected cards to see if they match
-    isMatching = (card1, card2) => {
-        if (card1.getAttribute("name") === card2.getAttribute("name")) {
-            
+    isMatching = (choiceOne, choiceTwo) => {
+        if (choiceOne.getAttribute("name") === choiceTwo.getAttribute("name")) {
+
         }
         return true
     }
