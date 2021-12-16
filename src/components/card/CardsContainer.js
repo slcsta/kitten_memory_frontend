@@ -35,12 +35,25 @@ class CardsContainer extends React.Component {
     }
 
     /* video example with hooks
+
+    if choiceOne src matches choiceTwo src then we are updating by taking
+    returning a new array of cards so we map over cards and fire a function
+    for each card 
     
         useEffect(() => {
             if(choiceOne && choiceTwo) {
 
                 if choiceOne.src === choiceTwo.src {
                     console.log('it's a match')
+                    setCards(prevCards => {
+                        return prevCards.map(card => {
+                            if (card.src === choiceOne.src) {
+                                return {...card, matched: true}
+                            } else {
+
+                            }
+                        })
+                    })
                     resetTurn()
                 } else {
                     console.log('not a match')
