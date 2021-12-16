@@ -34,50 +34,46 @@ class CardsContainer extends React.Component {
             return
     }
 
-    /* video example with hooks
-
-    if choiceOne src matches choiceTwo src then we are updating by taking
-    returning a new array of cards so we map over cards and fire a function
-    for each card 
+    //if choiceOne src matches choiceTwo src then we are updating by taking
+    //returning a new array of cards so we map over cards and fire a function
+    //for each card 
     
-        useEffect(() => {
-            if(choiceOne && choiceTwo) {
+        // isMatch = () => {
+        //     if(choiceOne && choiceTwo) {
+        //         // if choiceOne.src === choiceTwo.src {
+        //         //     console.log('it's a match')
+        //         //     setState(cards: prevCards => {
+        //         //         return prevCards.map(card => {
+        //         //             if (card.src === choiceOne.src) {
+        //         //                 return {...card, matched: true}
+        //         //             } else {
 
-                if choiceOne.src === choiceTwo.src {
-                    console.log('it's a match')
-                    setCards(prevCards => {
-                        return prevCards.map(card => {
-                            if (card.src === choiceOne.src) {
-                                return {...card, matched: true}
-                            } else {
+        //         //             }
+        //         //         })
+        //         //     })
+        //         //     resetTurn()
+        //         // } else {
+        //             console.log('not a match')
+        //             resetTurn()
+        //         }
 
-                            }
-                        })
-                    })
-                    resetTurn()
-                } else {
-                    console.log('not a match')
-                    resetTurn()
-                }
+        //     }
+        // // [choicOne, choiceTwo]
 
-            }
-        } [choicOne, choiceTwo])
-    
-    */
 
 
 
     //compare two selected cards to see if they match
-    isMatching = (choiceOne, choiceTwo) => {
-        if (choiceOne.getAttribute("name") === choiceTwo.getAttribute("name")) {
+    // isMatching = (choiceOne, choiceTwo) => {
+    //     if (choiceOne.getAttribute("name") === choiceTwo.getAttribute("name")) {
 
-        }
-        return true
-    }
-        else{
-            return false
-        }
-    }
+    //     }
+    //     return true
+    // }
+    //     else{
+    //         return false
+    //     }
+    // }
 
     // card choice for two selections
     handleChoice = (card) => {
@@ -121,6 +117,7 @@ class CardsContainer extends React.Component {
                             key={card.id} 
                             card={card} 
                             handleChoice={this.handleChoice}
+                            isFlipped={card === choiceOne || card === choiceTwo || card.matched}
                         />
                 ))}               
                 </div>

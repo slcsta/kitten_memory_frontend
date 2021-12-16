@@ -2,6 +2,7 @@
 // with an argument 
 import React from 'react'  
 import './Card.css'
+
 //functional component
 //then we can pass in props at top as card - by destructuring it in cards container
 export default function Card({ card, handleChoice }) {
@@ -17,7 +18,7 @@ export default function Card({ card, handleChoice }) {
                 <img className="card" src={card.src} alt="card front" />
                 <img 
                     className="card" 
-                    src="/images/kittylandscapetopng.png" 
+                    src="./src/images/kittylandscapetopng.png"
                     onClick={handleClick}
                     alt="card back" />
             </div>
