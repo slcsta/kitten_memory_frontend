@@ -117,7 +117,7 @@ class CardsContainer extends React.Component {
                             key={card.id} 
                             card={card} 
                             handleChoice={this.handleChoice}
-                            isFlipped={card === choiceOne || card === choiceTwo || card.matched}
+                            isFlipped={card === this.state.choiceOne || card === this.state.choiceTwo || card.matched}
                         />
                 ))}               
                 </div>
