@@ -19,11 +19,11 @@ class ScoresContainer extends React.Component {
     render(){
         return (
             <div>
-                <h2>All Scores</h2>
                 <ScoreForm />
-            <div>
-                    {this.props.scores.map(score => <p key={score.id}>{score.username}</p>)}
-                </div>
+                <h2>All Scores</h2>
+                    <div>
+                        {this.props.scores.map(score => <p key={score.id}>{score.username}</p>)}
+                    </div>
             </div>
         )
     }
