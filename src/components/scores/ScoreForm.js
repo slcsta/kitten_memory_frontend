@@ -18,14 +18,14 @@ class ScoreForm extends Component {
     // arrow function binds it to the "this" giving us the context of where it is
     // defined below
 
-    handleChange = e => {
+    handleChange = (e) => {
         //console.log(e.target.value)
         this.setState({username: e.target.value})
         return 
     }
 
-    handleSubmit = e => {
-        //e.preventDefualt()
+    handleSubmit = (e) => {
+        e.preventDefault()
         // dispatch my action to addScore
         this.props.dispatchAddScore(this.state)
         // then clear out my state

@@ -16,8 +16,6 @@ class CardsContainer extends React.Component {
         // clicked: false
     };
 
-    // need to update state here for the clicke event in card comp
-
     // shufflecard function does 3 things:
     // 1. duplicate cards
     // 2. randomize order of cards using sort
@@ -37,12 +35,13 @@ class CardsContainer extends React.Component {
     //if choiceOne src matches choiceTwo src then we are updating by taking
     //returning a new array of cards so we map over cards and fire a function
     //for each card 
+    // add a click event to each card so handle Click to the single card componente
     
-        // isMatch = () => {
-        //     if(choiceOne && choiceTwo) {
+        isMatching = () => {
+            if(this.state.choiceOne && this.state.choiceTwo) {
         //         // if choiceOne.src === choiceTwo.src {
         //         //     console.log('it's a match')
-        //         //     setState(cards: prevCards => {
+        //         //     this.setState(cards: prevCards => {
         //         //         return prevCards.map(card => {
         //         //             if (card.src === choiceOne.src) {
         //         //                 return {...card, matched: true}
@@ -55,27 +54,13 @@ class CardsContainer extends React.Component {
         //         // } else {
         //             console.log('not a match')
         //             resetTurn()
-        //         }
+                }
 
-        //     }
+        }
         // // [choicOne, choiceTwo]
 
-
-
-
-    //compare two selected cards to see if they match
-    // isMatching = (choiceOne, choiceTwo) => {
-    //     if (choiceOne.getAttribute("name") === choiceTwo.getAttribute("name")) {
-
-    //     }
-    //     return true
-    // }
-    //     else{
-    //         return false
-    //     }
-    // }
-
     // card choice for two selections
+    // use the ternary operator
     handleChoice = (card) => {
         // if choiceOne ? is null, it will evaluate to false and we will set choice 2
         // if choiceOne ? is not null, it will evaluate to true and we will set choice 1

@@ -8,6 +8,7 @@ import './Card.css'
 export default function Card({ card, handleChoice, isFlipped }) {
     // const {id, image} = props.card  
     // handle click func for clicking cards - need to add state change to cards container comp
+    // inside this function we want to update state inside the cards container
     let handleClick = () => {
         handleChoice(card)
     }
@@ -16,10 +17,13 @@ export default function Card({ card, handleChoice, isFlipped }) {
         <div className="card">
             <div className={isFlipped ? "isFlipped" : ""}></div>
             <div>
-                <img className="front" src={card.src} alt="card front" />
+                <img 
+                    className="card"   
+                    src={card.src} 
+                    alt="card front" />
                 <img 
                     className="back" 
-                    src="./src/images/kittylandscapetopng.png"
+                    src="https://cdn.pixabay.com/photo/2019/12/02/04/23/maneki-neko-4666877_1280.jpg"
                     onClick={handleClick}
                     alt="card back" />
             </div>
