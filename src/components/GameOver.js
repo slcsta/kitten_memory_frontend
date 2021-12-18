@@ -1,4 +1,4 @@
-// import React from 'react'
+import React from 'react'
 // import { connect } from 'react-redux' 
 // import { setScore } from './../../redux/actions/scoreActions'
 
@@ -8,6 +8,10 @@
 // if all cards are not flipped then game is not over and we want don't render score form
 
 class GameOver extends React.Component {
+
+    state = {
+        
+    }
     
 //     render(){
 //         return (
@@ -25,11 +29,5 @@ class GameOver extends React.Component {
 // import { Switch, Route } from 'react-router-dom';
 // import ScoreContainer from './ScoreContainer';
 
-// export default function Score() {
-//     return (
-//         <Switch>
-//             <Route path="/score" component={routerProps => <ScoreContainer routerProps={routerProps} /> } />
-//         </Switch>
-//     )
 }
 

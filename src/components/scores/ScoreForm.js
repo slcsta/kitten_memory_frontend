@@ -8,7 +8,8 @@ import { connect } from 'react-redux';
 class ScoreForm extends Component {
     // need local state here
     state ={
-        username: ""
+        username: "",
+        time: ""
     }
 
     // need an event handler here for the submit
@@ -20,7 +21,10 @@ class ScoreForm extends Component {
 
     handleChange = (e) => {
         //console.log(e.target.value)
-        this.setState({username: e.target.value})
+        this.setState({
+            [e.target.name]: e.target.value
+            //username: e.target.value})
+        })
         return 
     }
 
@@ -41,7 +45,17 @@ class ScoreForm extends Component {
                 <input 
                     id="score-username-input" 
                     onChange={this.handleChange} 
+                    name="username"
                     value={this.state.username} 
+                    type="text" />
+                <input type="submit"/>
+
+                <label htmlFor="score-time-input">Time:</label>
+                <input 
+                    id="score-time-input" 
+                    onChange={this.handleChange}
+                    name="time" 
+                    value={this.state.time} 
                     type="text" />
                 <input type="submit"/>
             </form>
