@@ -50,7 +50,56 @@ class CardsContainer extends React.Component {
 
     }
 
-    isMatching = () => {
+    // use effect fires when the component mounts automatically and whenever a dependency changes.
+
+    componentDidMount () {
+        if(this.state.choiceOne && this.state.choiceTwo) {
+            if (this.state.choiceOne.src === this.state.choiceTwo.src) {
+                console.log('a match')
+                this.resetTurn()
+    //         //     this.setState(cards: prevState => {
+    //         //         return prevState.map(card => {
+    //         //             if (card.src === choiceOne.src) {
+    //         //                 return {...card, matched: true}
+            } else {
+                console.log('no match')
+                this.resetTurn()
+            }             
+    //         //         })
+    //         //     })
+    //         //     resetTurn()
+    //         // } else {
+    //             console.log('not a match')
+    //             resetTurn()
+        }
+
+    }
+
+    componentDidUpdate () {
+        if(this.state.choiceOne && this.state.choiceTwo) {
+            if (this.state.choiceOne.src === this.state.choiceTwo.src) {
+                console.log('a match')
+                this.resetTurn()
+    //         //     this.setState(cards: prevState => {
+    //         //         return prevState.map(card => {
+    //         //             if (card.src === choiceOne.src) {
+    //         //                 return {...card, matched: true}
+            } else {
+                console.log('no match')
+                this.resetTurn()
+            }             
+    //         //         })
+    //         //     })
+    //         //     resetTurn()
+    //         // } else {
+    //             console.log('not a match')
+    //             resetTurn()
+        }
+
+    }
+
+
+    /* isMatching = () => {
         if(this.state.choiceOne && this.state.choiceTwo) {
             if (this.state.choiceOne.src === this.state.choiceTwo.src) {
                 console.log('a match')
@@ -73,6 +122,7 @@ class CardsContainer extends React.Component {
 
     }
     // // [choicOne, choiceTwo]
+    */
 
     // reset choices if no match & increase turns
     resetTurn = () => {
