@@ -54,6 +54,7 @@ class CardsContainer extends React.Component {
 
     componentDidMount () {
         if(this.state.choiceOne && this.state.choiceTwo) {
+            
             if (this.state.choiceOne.src === this.state.choiceTwo.src) {
                 console.log('a match')
                 this.resetTurn()
