@@ -79,24 +79,21 @@ class CardsContainer extends React.Component {
     componentDidUpdate () {
         if(this.state.choiceOne && this.state.choiceTwo) {
             if (this.state.choiceOne.src === this.state.choiceTwo.src) {
-                console.log('a match')
+                this.setState(prevState => {
+                    return prevState.map(card => {
+                        if (card.src === this.state.choiceOne.src) {
+                            return {...card, matched: true}
+                        } else {
+                            return card
+                        }
+                    })
+                })
                 this.resetTurn()
-    //         //     this.setState(cards: prevState => {
-    //         //         return prevState.map(card => {
-    //         //             if (card.src === choiceOne.src) {
-    //         //                 return {...card, matched: true}
             } else {
-                console.log('no match')
+    //  console.log('not a match')
                 this.resetTurn()
-            }             
-    //         //         })
-    //         //     })
-    //         //     resetTurn()
-    //         // } else {
-    //             console.log('not a match')
-    //             resetTurn()
+            }
         }
-
     }
 
 
