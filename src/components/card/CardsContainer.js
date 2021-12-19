@@ -40,16 +40,19 @@ class CardsContainer extends React.Component {
     // card choice for two selections
     // use the ternary operator
     handleChoice = (card) => {
+        //console.log(card)
         // if choiceOne ? is null, it will evaluate to false and we will set choice 2
         // if choiceOne ? is not null, it will evaluate to true and we will set choice 1
-        this.state.choiceOne ? this.setState({ choiceTwo: card}) : this.setState({ choiceOne: card })
+        //this.choiceOne ? this.setState({ choiceTwo: card}) : this.setState({ choiceOne: card })
         // if it already has a value, we've already selected choice 1
         // if it doesn't yet have a value, we haven't yet selected choice 1
+        this.state.choiceOne ? this.setState({ choiceTwo: card }) : this.setState({ choiceOne: card })
+
     }
 
     isMatching = () => {
         if(this.state.choiceOne && this.state.choiceTwo) {
-            if (this.choiceOne.src === this.choiceTwo.src) {
+            if (this.state.choiceOne.src === this.state.choiceTwo.src) {
                 console.log('a match')
                 this.resetTurn()
     //         //     this.setState(cards: prevState => {
@@ -57,7 +60,8 @@ class CardsContainer extends React.Component {
     //         //             if (card.src === choiceOne.src) {
     //         //                 return {...card, matched: true}
             } else {
-
+                console.log('no match')
+                this.resetTurn()
             }             
     //         //         })
     //         //     })
@@ -65,7 +69,7 @@ class CardsContainer extends React.Component {
     //         // } else {
     //             console.log('not a match')
     //             resetTurn()
-            }
+        }
 
     }
     // // [choicOne, choiceTwo]
@@ -90,7 +94,11 @@ class CardsContainer extends React.Component {
     // }
     //if card match occurs then push to array
     //below i will pass in a prop of handleChoic to the Card component
-    // pass down a prop in the map function so I have access to it in Card component    
+    // pass down a prop in the map function so I have access to it in Card component   
+    
+    // isFlipped={card === this.state.choiceOne || card === this.state.choiceTwo || card.matched}
+
+
     render() {    
         return ( 
             <div className="App">
@@ -102,7 +110,7 @@ class CardsContainer extends React.Component {
                             key={card.id} 
                             card={card} 
                             handleChoice={this.handleChoice}
-                            isFlipped={card === this.state.choiceOne || card === this.state.choiceTwo || card.matched}
+                           
                         />
                 ))}               
                 </div>
