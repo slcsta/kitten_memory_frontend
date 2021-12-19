@@ -19,6 +19,7 @@ class ScoreForm extends Component {
     // arrow function binds it to the "this" giving us the context of where it is
     // defined below
 
+    // need to make value of time come directly from time assigned to game 
     handleChange = (e) => {
         //console.log(e.target.value)
         this.setState({

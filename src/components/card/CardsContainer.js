@@ -36,28 +36,6 @@ class CardsContainer extends React.Component {
     //returning a new array of cards so we map over cards and fire a function
     //for each card 
     // add a click event to each card so handle Click to the single card componente
-    
-        isMatching = () => {
-            if(this.state.choiceOne && this.state.choiceTwo) {
-        //         // if choiceOne.src === choiceTwo.src {
-        //         //     console.log('it's a match')
-        //         //     this.setState(cards: prevCards => {
-        //         //         return prevCards.map(card => {
-        //         //             if (card.src === choiceOne.src) {
-        //         //                 return {...card, matched: true}
-        //         //             } else {
-
-        //         //             }
-        //         //         })
-        //         //     })
-        //         //     resetTurn()
-        //         // } else {
-        //             console.log('not a match')
-        //             resetTurn()
-                }
-
-        }
-        // // [choicOne, choiceTwo]
 
     // card choice for two selections
     // use the ternary operator
@@ -67,14 +45,36 @@ class CardsContainer extends React.Component {
         this.state.choiceOne ? this.setState({ choiceTwo: card}) : this.setState({ choiceOne: card })
         // if it already has a value, we've already selected choice 1
         // if it doesn't yet have a value, we haven't yet selected choice 1
+    }
+
+    isMatching = () => {
+        if(this.state.choiceOne && this.state.choiceTwo) {
+            if (this.choiceOne.src === this.choiceTwo.src) {
+                console.log('a match')
+                this.resetTurn()
+    //         //     this.setState(cards: prevState => {
+    //         //         return prevState.map(card => {
+    //         //             if (card.src === choiceOne.src) {
+    //         //                 return {...card, matched: true}
+            } else {
+
+            }             
+    //         //         })
+    //         //     })
+    //         //     resetTurn()
+    //         // } else {
+    //             console.log('not a match')
+    //             resetTurn()
+            }
 
     }
+    // // [choicOne, choiceTwo]
 
     // reset choices if no match & increase turns
     resetTurn = () => {
         this.setState({ choiceTwo: null})
         this.setState({ choiceOne: null })
-        this.setState(prevTurns => prevTurns + 1)
+        this.setState({turns: this.state.turns + 1})
     }
 
     // add onClick to handle function of clicking cards

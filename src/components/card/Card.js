@@ -18,7 +18,7 @@ export default function Card({ card, handleChoice, isFlipped }) {
             <div className={isFlipped ? "isFlipped" : ""}></div>
             <div>
                 <img 
-                    className="card"   
+                    className="front"   
                     src={card.src} 
                     alt="card front" />
                 <img 
