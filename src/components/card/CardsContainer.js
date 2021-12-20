@@ -5,6 +5,13 @@ import React from 'react';
 import cardImages from '../../database';
 import Card from './Card';
 
+// need to add temporary disable card flip function
+// need to add timer
+// need to add turns counter mounted to the dom
+// need to render score form when game is over
+// need to format score route
+// need to add instructions
+
 class CardsContainer extends React.Component {
     // add empty cards array for pushing cards after they are checked
     
