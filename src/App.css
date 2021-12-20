@@ -55,9 +55,7 @@ button:hover {
 } */
 
 .img {
-  /* width: 11rem;
-  height: 7rem; */
-object-fit: cover;
+  object-fit: cover;
 } 
 
 /* .image-backside {

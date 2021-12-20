@@ -52,29 +52,29 @@ class CardsContainer extends React.Component {
 
     // use effect fires when the component mounts automatically and whenever a dependency changes.
 
-    componentDidMount () {
-        if(this.state.choiceOne && this.state.choiceTwo) {
+    // componentDidMount () {
+    //     if(this.state.choiceOne && this.state.choiceTwo) {
             
-            if (this.state.choiceOne.src === this.state.choiceTwo.src) {
-                console.log('a match')
-                this.resetTurn()
+    //         if (this.state.choiceOne.src === this.state.choiceTwo.src) {
+    //             console.log('a match')
+    //             this.resetTurn()
     //         //     this.setState(cards: prevState => {
     //         //         return prevState.map(card => {
     //         //             if (card.src === choiceOne.src) {
     //         //                 return {...card, matched: true}
-            } else {
-                console.log('no match')
-                this.resetTurn()
-            }             
+            // } else {
+            //     console.log('no match')
+            //     this.resetTurn()
+            // }             
     //         //         })
     //         //     })
     //         //     resetTurn()
     //         // } else {
     //             console.log('not a match')
     //             resetTurn()
-        }
+    //     }
 
-    }
+    // }
 
     componentDidUpdate () {
         if(this.state.choiceOne && this.state.choiceTwo) {
@@ -145,6 +145,9 @@ class CardsContainer extends React.Component {
     // pass down a prop in the map function so I have access to it in Card component   
     
     // isFlipped={card === this.state.choiceOne || card === this.state.choiceTwo || card.matched}
+    // if card currently equal to the card we are currently iterating, choice one, then i want it to be true - flipped
+    // or if card iterating is equal to choice two
+    // or if the card is matched, then we want cards to stay flipped
 
 
     render() {    
@@ -158,6 +161,7 @@ class CardsContainer extends React.Component {
                             key={card.id} 
                             card={card} 
                             handleChoice={this.handleChoice}
+                            flipped={card === this.state.choiceOne || card === this.state.choiceTwo || card.matched}
                            
                         />
                 ))}               
