@@ -78,18 +78,19 @@ class CardsContainer extends React.Component {
 
     // set timeout gives us a delay in flipping cards back over when they don't match 
     // so that we can see cards the 1000 is milliseconds so it stays flipped for 1 second
+    // Dont change state inside componentDidUpdate unless it's conditional
     componentDidUpdate () {
         if(this.state.choiceOne && this.state.choiceTwo) {
             if (this.state.choiceOne.src === this.state.choiceTwo.src) {
-                this.setState(prevState => {
-                    return prevState.map(card => {
+                this.setState(prevState => ({
+                    cards: prevState.cards.map(card => {
                         if (card.src === this.state.choiceOne.src) {
                             return {...card, matched: true}
                         } else {
                             return card
                         }
                     })
-                })
+                }))
                 this.resetTurn()
             } else {
     //  console.log('not a match')
