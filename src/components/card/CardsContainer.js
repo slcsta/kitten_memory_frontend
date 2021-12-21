@@ -162,8 +162,8 @@ class CardsContainer extends React.Component {
 
     render() {    
         return ( 
-            <div className="App">
-                <h1>Kitten Memory</h1>
+            <div className="gameboard">
+                <h2>Kitten Memory Game</h2>
                 <button onClick={this.shuffleCards}>Start Game</button>
                  <div className="card-grid">
                     {this.state.cards.map(card => (

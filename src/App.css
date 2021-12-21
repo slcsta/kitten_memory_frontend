@@ -1,6 +1,38 @@
 .App { 
-  max-width: 860px;
-  margin: 40px auto;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(211, 91, 109);
+  border: 2px solid rgb(141, 119, 119);
+  border-radius: 6px;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background: #d4a0b1;
+  color: #fff;
+
+}
+
+.gameboard { 
+  max-width: 850px;
+  margin: 10px auto;
 }
 
 button {
@@ -15,7 +47,7 @@ button {
 }
 
 button:hover {
-  background: #c23866;
+  background: #d4a0b1;
   color: #fff;
 }
 
@@ -29,71 +61,16 @@ button:hover {
 } */
 
 .card-grid {
-  margin-top: 40px;
+  margin-top: 30px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 20px;
+  grid-gap: 10px;
 }
-
-/* .card {
-  justify-self: center;
-  border: grey solid 1px;
-  /* padding: .3rem; */
-  /* height: 15rem;
-  width: 20rem; */
-  /* display: inline-grid; */
-  /* margin: 1rem 1rem; */
-  
-
-/* .container {
-  padding: 1rem;
-  width: contain;
-  height: contain;
-  display: none;
-  background: #515DA2;
-  opacity: .8;
-} */
 
 .img {
   object-fit: cover;
 } 
 
-/* .image-backside {
-  background: pink;
-  background-size: contain;
-  
-  border-radius: 5px;
-  box-shadow: 3px 4px grey;
-  padding: 10px;
-  margin: 10px;
-
-} */
-
-/* .grid-header-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  padding: 10px;
-} */
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: red;
-}
-
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
 
 
 
