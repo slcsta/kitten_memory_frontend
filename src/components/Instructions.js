@@ -8,19 +8,17 @@ class Instructions extends Component {
             <div>
                 <h2> How to Play </h2>
                     <div className="instructions">
-                    <p>Find all pairs of matching cards in the least amount of turns 
-                    possible.</p>
+                    <p>Find all pairs of matching cards using the least amount of turns.</p>
 
-                    <p>Start by clicking on a card to flip it. Next, click on a second 
-                    card to find a match. Cards that match will remain flipped. Cards 
-                    that don't match will flip back down.</p>
+                    <p>To begin, click on a card to flip it. Click a second card to see 
+                    if the two cards match. Matches will remain flipped, but non-matches will flip 
+                    back down.</p>
 
-                    <p>Every attempt is counted as a turn. When all matches are found, 
-                    the game ends and the player can enter a name to record the score.</p> 
+                    <p>Every match attempt is counted as a turn. When all matches are found, the
+                    game ends and the player can record their score.</p>
 
-                    <p>To start a new game at any time, click on the "play game" button. 
-                    Only fully completed games will have their scores saved as the number
-                    of turns taken to match all cards.
+                    <p>To start a new game at any time, click on the "Restart Game" button. 
+                    Only fully completed games will record a score.
                     </p>
                 </div>
             </div>
