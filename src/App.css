@@ -30,6 +30,13 @@ li a:hover {
 
 }
 
+.instructions {
+  text-align: justify;
+  max-width: 850px;
+  margin: 10px auto;
+
+}
+
 .gameboard { 
   max-width: 850px;
   margin: 10px auto;
