@@ -34,6 +34,8 @@ class CardsContainer extends React.Component {
         let shuffledCards = [...cardImages, ...cardImages]
             .sort(() => Math.random() - 0.5)
             .map((card) => ({ ...card, id: Math.random() }))
+            this.setState({ choiceOne: null})
+            this.setState({ choiceTwo: null})
             this.setState({ cards: shuffledCards })
             this.setState({ turns: 0 })
             return
@@ -158,6 +160,9 @@ class CardsContainer extends React.Component {
     // if card currently equal to the card we are currently iterating, choice one, then i want it to be true - flipped
     // or if card iterating is equal to choice two
     // or if the card is matched, then we want cards to stay flipped
+    componentDidMount() {
+        this.shuffleCards()
+    }
 
 
     render() {    
@@ -165,6 +170,7 @@ class CardsContainer extends React.Component {
             <div className="gameboard">
                 <h2>Kitten Memory Game</h2>
                 <button onClick={this.shuffleCards}>Start Game</button>
+                <p>Turns: {this.state.turns}</p>
                  <div className="card-grid">
                     {this.state.cards.map(card => (
                         <Card 
