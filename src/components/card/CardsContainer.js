@@ -185,7 +185,9 @@ class CardsContainer extends React.Component {
                             flipped={card === this.state.choiceOne || card === this.state.choiceTwo || card.matched}  
                         />
                 ))}
-                    {this.state.cards.filter(card => card.matched).length >= 12 ? <ScoreForm /> : "" }          
+                    {this.state.cards.filter(card => card.matched).length >= 12 ? 
+                    <ScoreForm 
+                        turns={this.state.turns}/> : "" }          
                 </div>
             </div> 
         )

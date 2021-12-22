@@ -9,7 +9,7 @@ class ScoreForm extends Component {
     // need local state here
     state ={
         username: "",
-        time: ""
+        turns: ""
     }
 
     // need an event handler here for the submit
@@ -44,6 +44,8 @@ class ScoreForm extends Component {
         <div className="popup-box">
             <div className="box">
                 <form onSubmit={this.handleSubmit}>
+                    <h4>Success! All Kittens Matched</h4>
+                    <h5>Save your score</h5>
                     <label htmlFor="score-username-input">Username:</label>
                     <input 
                         id="score-username-input" 
@@ -51,13 +53,14 @@ class ScoreForm extends Component {
                         name="username"
                         value={this.state.username} 
                         onChange={this.handleChange}    
-                    />
+                    /><br /><br />
                     <label htmlFor="score-turns-input">Turns:</label>
                     <input 
-                        id="score-time-input" 
+                        id="score-turns-input" 
                         type="text"
-                        name="time"
-                        value={this.state.time} 
+                        name="turns"
+                        value={this.props.turns}
+                        readonly="readonly" 
                         onChange={this.handleChange}     
                     />
                     <input type="submit"/>
