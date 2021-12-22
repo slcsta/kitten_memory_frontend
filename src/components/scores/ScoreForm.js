@@ -47,19 +47,19 @@ class ScoreForm extends Component {
                     <label htmlFor="score-username-input">Username:</label>
                     <input 
                         id="score-username-input" 
-                        onChange={this.handleChange} 
+                        type="text" 
                         name="username"
                         value={this.state.username} 
-                        type="text" />
-                    <input type="submit"/>
-
-                    <label htmlFor="score-time-input">Time:</label>
+                        onChange={this.handleChange}    
+                    />
+                    <label htmlFor="score-turns-input">Turns:</label>
                     <input 
                         id="score-time-input" 
-                        onChange={this.handleChange}
-                        name="time" 
+                        type="text"
+                        name="time"
                         value={this.state.time} 
-                        type="text" />
+                        onChange={this.handleChange}     
+                    />
                     <input type="submit"/>
                 </form>
             </div>

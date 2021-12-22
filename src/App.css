@@ -79,6 +79,7 @@ button:hover {
 
 /* Popup style */
 .popup-box {
+  transition-delay: 0.4s;
   position: fixed;
   background: #00000050;
   width: 100%;
@@ -89,7 +90,7 @@ button:hover {
  
 .box {
   position: relative;
-  width: 70%;
+  width: 30%;
   margin: 0 auto;
   height: auto;
   max-height: 70vh;
