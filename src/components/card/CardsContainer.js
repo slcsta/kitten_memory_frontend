@@ -4,13 +4,14 @@
 import React from 'react';
 import cardImages from '../../database';
 import Card from './Card';
+import ScoreForm from '../scores/ScoreForm';
+
 
 // need to add temporary disable card flip function
 // need to add timer
-// need to add turns counter mounted to the dom
 // need to render score form when game is over
 // need to format score route
-// need to add instructions
+
 
 class CardsContainer extends React.Component {
     // add empty cards array for pushing cards after they are checked
@@ -19,7 +20,8 @@ class CardsContainer extends React.Component {
         cards: [],
         turns: 0,
         choiceOne: null,
-        choiceTwo: null
+        choiceTwo: null,
+        gameOver: null
         // clicked: false
     };
 
@@ -56,7 +58,6 @@ class CardsContainer extends React.Component {
         // if it already has a value, we've already selected choice 1
         // if it doesn't yet have a value, we haven't yet selected choice 1
         this.state.choiceOne ? this.setState({ choiceTwo: card }) : this.setState({ choiceOne: card })
-
     }
 
     // use effect fires when the component mounts automatically and whenever a dependency changes.
@@ -105,8 +106,12 @@ class CardsContainer extends React.Component {
     //  console.log('not a match')
                 setTimeout(() => this.resetTurn(), 1000)
             }
+
+            }
         }
-    }
+    
+    // need to add logic for game over - if game over
+    // this.state.cards.matched.length >= 6 ? this.setState({ gamveOver: true }) : ""
 
 
     /* isMatching = () => {
@@ -177,15 +182,18 @@ class CardsContainer extends React.Component {
                             key={card.id} 
                             card={card} 
                             handleChoice={this.handleChoice}
-                            flipped={card === this.state.choiceOne || card === this.state.choiceTwo || card.matched}
-                           
+                            flipped={card === this.state.choiceOne || card === this.state.choiceTwo || card.matched}  
                         />
-                ))}               
+                ))}
+                    {this.state.cards.filter(card => card.matched).length >= 12 ? <ScoreForm /> : "" }          
                 </div>
             </div> 
         )
     }
 }
 export default CardsContainer
+
+// this.state.cards.matched.length >= 6 ? this.setState({ gamveOver: true }) : ""
+
     
     

@@ -41,25 +41,29 @@ class ScoreForm extends Component {
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit}>
-                <label htmlFor="score-username-input">Username:</label>
-                <input 
-                    id="score-username-input" 
-                    onChange={this.handleChange} 
-                    name="username"
-                    value={this.state.username} 
-                    type="text" />
-                <input type="submit"/>
+        <div className="popup-box">
+            <div className="box">
+                <form onSubmit={this.handleSubmit}>
+                    <label htmlFor="score-username-input">Username:</label>
+                    <input 
+                        id="score-username-input" 
+                        onChange={this.handleChange} 
+                        name="username"
+                        value={this.state.username} 
+                        type="text" />
+                    <input type="submit"/>
 
-                <label htmlFor="score-time-input">Time:</label>
-                <input 
-                    id="score-time-input" 
-                    onChange={this.handleChange}
-                    name="time" 
-                    value={this.state.time} 
-                    type="text" />
-                <input type="submit"/>
-            </form>
+                    <label htmlFor="score-time-input">Time:</label>
+                    <input 
+                        id="score-time-input" 
+                        onChange={this.handleChange}
+                        name="time" 
+                        value={this.state.time} 
+                        type="text" />
+                    <input type="submit"/>
+                </form>
+            </div>
+        </div>
         )
     }
 }
