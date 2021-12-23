@@ -8,9 +8,15 @@ import CardsContainer from './card/CardsContainer';
 export default function Pages() {
     return (
         <Switch>
-            <Route exact path="/" component={ Home } />
-            <Route exact path="/instructions" component={ Instructions } />
-            <Route exact path="/cards" component={ CardsContainer } />
+            <Route 
+                exact path="/" component={routerProps => <Home routerInfo={routerProps} /> }
+            />
+            <Route 
+                exact path="/instructions" component={routerProps => <Instructions routerInfo={routerProps} /> } 
+            />
+            <Route 
+                exact path="/cards" component={ routerProps => <CardsContainer routerInfo={routerProps} /> } 
+                />
             <Route exact path="/scores" component={routerProps => <ScoresContainer routerProps={routerProps} /> } />
         </Switch>
     )

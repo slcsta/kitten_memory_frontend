@@ -1,25 +1,18 @@
-// we want this to be a class component because we want a controlled state for our form for our input fields
-// how do i set up this one input field to be controlled with my state?
 
 import React, { Component } from 'react'; 
+//import { withRouter } from 'react-router-dom'
 import { addScore } from '../../redux/scoreActions';
 import { connect } from 'react-redux';
 
+
+
 class ScoreForm extends Component {
-    // need local state here
     state ={
         username: "",
-        turns: this.props.turns
+        turns: this.props.turns,
     }
 
-    // need an event handler here for the submit
-    // needs to be an arrow function so that we have
-    // the context from where we are defining it rather than where we are calling it
-    // a regular function would only give us the context of where we are calling it
-    // arrow function binds it to the "this" giving us the context of where it is
-    // defined below
-
-    // need to make value of time come directly from time assigned to game 
+     
     handleChange = (e) => {
         //console.log(e.target.value)
         this.setState({
@@ -33,54 +26,56 @@ class ScoreForm extends Component {
         e.preventDefault()
         // dispatch my action to addScore
         this.props.dispatchAddScore(this.state)
-        // then clear out my state
         this.setState({username: ""})
-        this.setState({turns: ""})
+        this.setState({turns: ""})  
     }
 
-    // what do i need to do in my score form to dispatch addScore?
+    // handleClick = () => {
+    //     this.props.routerInfo.history.push("/scores")
+
+    // }
+
 
     render() {
         return (
-        <div className="popup-box">
-            <div className="box">
-                <form onSubmit={this.handleSubmit}>
-                    <h4>Success! All Kittens Matched</h4>
-                    <h5>Save your score of {this.state.turns}</h5>
-                    <label htmlFor="score-username-input">Username:</label>
-                    <input 
-                        id="score-username-input" 
-                        type="text" 
-                        name="username"
-                        value={this.state.username} 
-                        onChange={this.handleChange}    
-                    /><br /><br />
-                    <label htmlFor="score-turns-input">Turns:</label>
-                    <input 
-                        id="score-turns-input" 
-                        type="text"
-                        name="turns"
-                        value={this.state.turns}
-                        hidden="hidden"
-                        // onChange={this.handleChange}     
-                    />
-                     
-                    <input type="submit"/>
+            <div className="popup-box">
+                <div className="box">
+                    <form onSubmit={this.handleSubmit}>
+                        <h4>Success! All Kittens Matched</h4>
+                        <h5>Save your score of {this.state.turns}</h5>
+                        <label htmlFor="score-username-input">Username:</label>
+                        <input 
+                            id="score-username-input" 
+                            type="text" 
+                            name="username"
+                            value={this.state.username} 
+                            onChange={this.handleChange}    
+                            /><br /><br />
+                        <label htmlFor="score-turns-input"></label>
+                        <input 
+                            id="score-turns-input" 
+                            type="text"
+                            name="turns"
+                            value={this.state.turns}
+                            hidden="hidden"
+                            onChange={this.handleChange}     
+                        />
+                        <input type="submit" />
+
+                    {/* <button onClick={this.handleClick}>Submit</button>  */}
                 </form>
-            </div>
-        </div>
+            </div>  
+        </div>               
+                    
+                
         )
     }
 }
 
-// always want to return an object here that will merge with our props
 function mapDispatchToProps(dispatch) {
     return {
       dispatchAddScore: (score) => dispatch(addScore(score)) 
     }
 }
-// getting access to dispatch here
-// so with connect, 1st argument gives me access to state
-// 2nd arg gives me access to dispatch
-// and both args will return an object that will be merged with my props
+
 export default connect(null, mapDispatchToProps)(ScoreForm)
