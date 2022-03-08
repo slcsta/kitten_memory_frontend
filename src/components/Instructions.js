@@ -5,20 +5,17 @@ import React, { Component } from 'react'
 class Instructions extends Component {
     render() {
         return (
-            <div>
-                <h2> How to Play </h2>
-                    <div className="instructions">
-                    <p>Find all pairs of matching cards using the least amount of turns.</p>
+            <div className="container-fluid homepage-bgimage">
+                <div className="instructions">
+                    <h3> Instructions </h3>
 
-                    <p>To begin, click on a card to flip it. Click a second card to see 
-                    if the two cards match. Matches will remain flipped, but non-matches will flip 
-                    back down.</p>
+                    <p>Find all pairs of matching cards in the least number of turns possible.</p>
 
-                    <p>Every match attempt is counted as a turn. When all matches are found, the
-                    game ends and the player can record their score.</p>
+                    <p>For each turn, click on a card to flip it and then a second card to find a match. 
+                        Non-matches will flip back down. The game ends when all matches are found.</p>
 
-                    <p>To start a new game at any time, click on the "Restart Game" button. 
-                    Only fully completed games will record a score.
+                    <p>At the end of every completed game, players have the option to record 
+                        their score. Restart a new game at any time with the "Restart Game" button.
                     </p>
                 </div>
             </div>

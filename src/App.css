@@ -8,7 +8,7 @@ ul {
   padding: 0;
   overflow: hidden;
   background-color: rgb(211, 91, 109);
-  border: 2px solid rgb(141, 119, 119);
+  border: 5px solid darkred;
   border-radius: 6px;
 }
 
@@ -29,11 +29,53 @@ li a:hover {
   color: #fff;
 }
 
-.instructions {
-  text-align: justify;
-  max-width: 600px;
-  margin: 10px auto;
+.homepage-bgimage {
+  background: url("https://cdn.pixabay.com/photo/2019/12/02/04/23/maneki-neko-4666877_1280.jpg");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
+.homepage-bgimage h1 {
+  font-size: 200px;
+  color: lightseagreen;
+  text-shadow: 3px 3px 3px black;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%); /* iOS */
+  transform: translate(-50%, -50%);
+}
+
+.instructions-bgimage {
+  background: url("https://cdn.pixabay.com/photo/2019/12/02/04/23/maneki-neko-4666877_1280.jpg");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.instructions h3 {
+  text-align: center;
+  color: black;
+}
+
+.instructions p {
+  color: black;
+}
+
+.instructions {
+  border: 5px solid darkred;
+  display: block;
+  position: absolute;
+  text-align: justify;
+  top: 20%;
+  left: 30%;
+  right: 30%;
+  background-color: white;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .gameboard { 
@@ -44,7 +86,7 @@ li a:hover {
 button {
   background: none;
   border: 2px solid gray;
-  padding: 6px 12px;
+  padding: 6px 6px;
   border-radius: 4px;
   color: gray;
   font-weight: bold;
@@ -67,7 +109,7 @@ button:hover {
 } */
 
 .card-grid {
-  margin-top: 30px;
+  margin-top: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 10px;
@@ -101,6 +143,14 @@ button:hover {
   border: 1px solid #999;
   overflow: auto;
 }
+
+/* .home {
+  background-image: url("https://cdn.shopify.com/s/files/1/0022/9176/1241/products/here-kitty-kitty-quilt-pattern-uses-woof-woof-meow-fabric-by-stacy-iest-hsu-for-moda-finished-quilt-48-x-48-212673_600x600.jpg?v=1596649555"); 
+  background-size: contain;
+  height: 100%;
+  width: 100%;
+
+} */
 
 
 

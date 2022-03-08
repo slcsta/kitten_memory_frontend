@@ -9,6 +9,7 @@ function reducer(state = {
 }, action) {
  switch(action.type) {
     case "SET_SCORES":
+        console.log("f")
 
         return {
             ...state,

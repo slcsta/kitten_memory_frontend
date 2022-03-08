@@ -6,12 +6,17 @@
 
 // get scores
 export const setScores = () => { 
+    console.log("c")
     return (dispatch) => {
         // now it's a callback so i can put any async funciton in here so this is where i want to put my fetch request
         fetch("http://localhost:3000/scores")
-        .then(r => r.json())
+        .then(r => {
+            console.log("e")
+            return r.json()
+        })
         .then(scores => dispatch({type: "SET_SCORES", payload: scores}))
     }
+    console.log("d")
 }
 
 

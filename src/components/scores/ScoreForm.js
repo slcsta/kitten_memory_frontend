@@ -1,8 +1,9 @@
 
 import React, { Component } from 'react'; 
-//import { withRouter } from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 import { addScore } from '../../redux/scoreActions';
 import { connect } from 'react-redux';
+//import {Redirect} from 'react-router-dom'
 
 
 
@@ -10,6 +11,7 @@ class ScoreForm extends Component {
     state ={
         username: "",
         turns: this.props.turns,
+        flag: false
     }
 
      
@@ -26,12 +28,14 @@ class ScoreForm extends Component {
         e.preventDefault()
         // dispatch my action to addScore
         this.props.dispatchAddScore(this.state)
-        this.setState({username: ""})
-        this.setState({turns: ""})  
+        this.setState({username: "",
+        turns: "",
+        flag: true}) 
+        this.props.history.push("/scores") 
     }
 
     // handleClick = () => {
-    //     this.props.routerInfo.history.push("/scores")
+    //     
 
     // }
 
@@ -78,4 +82,4 @@ function mapDispatchToProps(dispatch) {
     }
 }
 
-export default connect(null, mapDispatchToProps)(ScoreForm)
+export default withRouter(connect(null, mapDispatchToProps)(ScoreForm))

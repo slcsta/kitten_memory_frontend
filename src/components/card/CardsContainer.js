@@ -78,7 +78,7 @@ class CardsContainer extends React.Component {
             <div className="gameboard">
                 <h2>Kitten Memory Game</h2>
                 <button onClick={this.shuffleCards}>Restart Game</button>
-                <p>Turns: {this.state.turns}</p>
+                <h4>Turns: {this.state.turns}</h4>
                  <div className="card-grid">
                     {this.state.cards.map(card => (
                         <Card 
